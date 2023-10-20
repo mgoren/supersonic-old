@@ -1,5 +1,11 @@
 # Configuration
 
+**Setup Firebase:**
+- Create firebase project and add to app, including firebase hosting
+- Fill in firebaseConfig values in `.env` file (see `.env.example`)
+- Create Firebase Realtime Database in test mode
+- Fill in DB URL (likely includes `rtdb.firebaseio.com`) as _REACT_APP_FIREBASE_DATABASE_URL_ in `.env` file
+
 **Development:**
 Set environment variables in `.env`
 

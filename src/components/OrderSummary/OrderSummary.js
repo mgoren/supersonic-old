@@ -4,7 +4,6 @@ import { VOLUNTEER_OPTIONS, HOSPITALITY_OPTIONS } from 'config';
 export default function OrderSummary({ order, currentPage }) {
   const total = order.admissionCost * order.admissionQuantity + order.donation;
 
-  let volunteerTitles = getCheckboxTitles({ property: order.volunteer, options: VOLUNTEER_OPTIONS });
   let hospitalityTitles = getCheckboxTitles({ property: order.hospitality, options: HOSPITALITY_OPTIONS });
 
   return (
@@ -32,10 +31,8 @@ export default function OrderSummary({ order, currentPage }) {
             Miscellanea
           </Typography>
           <p>
-            Volunteer: {!!order.volunteer.length ? volunteerTitles.join(', ') : ' not signed up'}<br />
-            Hospitality: {!!order.hospitality.length ? hospitalityTitles.join(', ') : ' not signed up'}<br />
-            Scholarship: {!!order.scholarship.length ? 'requested' : ' not requested'}<br />
-            Share my info with other organizers: {!!order.share.length ? 'yes' : 'no'}<br />
+            Housing: {!!order.hospitality.length ? hospitalityTitles.join(', ') : ' not signed up'}<br />
+            Include on roster: {!!order.share.length ? order.share.join(', ') : 'do not share'}<br />
             {order.comments && <>Comments: {order.comments}<br /></>}
           </p>
         </Box>

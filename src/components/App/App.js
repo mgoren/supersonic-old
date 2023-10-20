@@ -4,7 +4,6 @@ import Welcome from 'components/Static/Welcome';
 import Staff from 'components/Static/Staff';
 import Workshops from 'components/Static/Workshops';
 import Schedule from 'components/Static/Schedule';
-import Dances from 'components/Static/Dances';
 import Fragrance from 'components/Static/Fragrance';
 import Contact from 'components/Static/Contact';
 import Payment from 'components/Static/Payment';
@@ -24,7 +23,6 @@ export default function App() {
             <Route exact path="/staff" element=<Staff /> />
             <Route exact path="/workshops" element=<Workshops /> />
             <Route exact path="/schedule" element=<Schedule /> />
-            <Route exact path="/dances" element=<Dances /> />
             <Route exact path="/fragrance" element=<Fragrance /> />
             <Route exact path="/contact" element=<Contact /> />
             <Route exact path="/waystopay" element=<Payment /> />

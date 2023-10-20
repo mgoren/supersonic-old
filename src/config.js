@@ -14,17 +14,18 @@ export const STEPS = [
 
 export const PAYMENT_METHODS = ['paypal', 'check']; // options are paypal and/or check (first is default)
 
-export const TITLE = '2023 Portland ECD Ball Registration'
-export const CONFIRMATION_PAYPAL_TITLE = 'ECD Ball Confirmation';
-export const CONFIRMATION_CHECK_TITLE = 'ECD Ball Registration';
-export const EMAIL_CONTACT = 'registrar@portlandecdball.info';
+export const TITLE = 'Supersonic 2024'
+export const CONFIRMATION_PAYPAL_TITLE = 'Supersonic Confirmation';
+export const CONFIRMATION_CHECK_TITLE = 'Supersonic Registration';
+export const EMAIL_CONTACT = 'info@supersoniccontra.com';
 export const DETAILS_URL = 'portlandcountrydance.org';
 export const COVID_POLICY_URL = 'pcdc.fun/covid19';
 export const CONTACT_TRACING_URL = 'pcdc.fun/contact-trace';
 export const WAIVER_URL = 'pcdc.fun/files/PCDC_Events_Waiver.pdf';
 export const PAYPAL_ME_URL = 'paypal.me/PortlandBall';
 
-export const ADMISSION_COST_RANGE = [50, 50];
+export const ADMISSION_COST_RANGE = [120, 300];
+export const ADMISSION_COST_DEFAULT = 180;
 export const ADMISSION_QUANTITY_RANGE = [1, 2];
 export const DONATION_OPTION = true;
 export const DONATION_RANGE = [0, 999];
@@ -64,16 +65,16 @@ export const FIELD_CONFIG = {
     width: 6,
     autoComplete: 'family-name'
   },
-  pronouns: {
-    label: 'pronouns',
-    validation: PRONOUNS_VALIDATION,
+  nametag: {
+    label: 'Nametag',
+    validation: NAME_VALIDATION,
     defaultValue: '',
     order: 3,
     width: 12
   },
-  nametag: {
-    label: 'Nametag',
-    validation: NAME_VALIDATION,
+  pronouns: {
+    label: 'Pronouns for nametag',
+    validation: PRONOUNS_VALIDATION,
     defaultValue: '',
     order: 4,
     width: 12
@@ -163,8 +164,8 @@ export const FIELD_CONFIG = {
 // below is config for this particular registration instance
 
 // order of FIRST_PERSON_FIELDS is used in emailConfirmationIsFirstInvalidField
-const FIRST_PERSON_FIELDS = ['first', 'last', 'nametag', 'email', 'emailConfirmation', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
-const OTHER_PERSON_FIELDS = ['first', 'last', 'nametag', 'email', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
+const FIRST_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'emailConfirmation', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
+const OTHER_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
 
 export const PERSON_INPUTS = [
   { label: 'Your contact information', fields: FIRST_PERSON_FIELDS },
@@ -179,14 +180,15 @@ export const ORDER_DEFAULTS = {
     index
   })),
   emailConfirmation: '', // because we're overriding this field name so is not part of the people array
-  admissionCost: ADMISSION_COST_RANGE[1],
+  admissionCost: ADMISSION_COST_DEFAULT,
   admissionQuantity: ADMISSION_QUANTITY_RANGE[0],
   donation: DONATION_RANGE[0],
   volunteer: [],
   hospitality: [],
   scholarship: [],
-  share: [],
-  comments: ''
+  share: ['name', 'email', 'phone', 'location'],
+  comments: '',
+  workTrade: '',
 }
 
 export const VOLUNTEER_OPTIONS = [
@@ -198,8 +200,8 @@ export const VOLUNTEER_OPTIONS = [
 ];
 
 export const HOSPITALITY_OPTIONS = [
-  { label: 'I am requesting hospitality', value: 'requesting' },
-  { label: 'I am offering hospitality', value: 'offering' },
+  { label: 'I can offer housing', value: 'offering' },
+  { label: 'I need housing (limited availability)', value: 'requesting' },
 ];
 
 export const SCHOLARSHIP_OPTIONS = [
@@ -207,7 +209,10 @@ export const SCHOLARSHIP_OPTIONS = [
 ];
 
 export const SHARE_OPTIONS = [
-  { label: 'YES! Please share my information with other organizers/events.', value: 'yes' },
+  { label: 'Include my name in the roster', value: 'name' },
+  { label: 'Include my email in the roster', value: 'email' },
+  { label: 'Include my phone number in the roster', value: 'phone' },
+  { label: 'Include my city and state in the roster', value: 'location' },
 ]
 
 export const DANCES = [

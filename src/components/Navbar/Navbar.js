@@ -6,14 +6,11 @@ import ColorModeToggle from 'components/ColorModeToggle';
 
 const pages = [
   { title: 'Home', path: '/' },
-  { title: 'Welcome', path: '/welcome' },
-  { title: 'Band & Caller', path: '/staff' },
-  { title: 'Workshops', path: '/workshops' },
-  { title: 'Schedule', path: '/schedule' },
-  { title: 'Dances', path: '/dances' },
-  { title: 'Fragrance-Free', path: '/fragrance' },
+  // { title: 'Welcome', path: '/welcome' },
+  { title: 'Bands & Callers', path: '/staff' },
+  // { title: 'Schedule', path: '/schedule' },
   { title: 'Contact Us', path: '/contact' },
-  { title: 'Ways to Pay', path: '/waystopay' },
+  { title: 'Payment Info', path: '/waystopay' },
   { title: 'Registration', path: '/registration' }
 ];
 

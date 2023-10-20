@@ -6,8 +6,9 @@ export default function Home() {
   return (
     <StyledPaper extraStyles={{ maxWidth: 750 }} align="center">
       <PageTitle>
-        Portland English Country Dance Ball<br />
-        November 3rd, 4th, and 5th, 2023
+        Supersonic Contra Dance<br />
+        2024 February 2&ndash;4<br />
+        Seattle
       </PageTitle>
 
       <Box mt={-5} mb={4}>
@@ -15,36 +16,30 @@ export default function Home() {
       </Box>
 
       <Typography variant="h6" sx={{ mb: 2 }}>
-        Dances led by <StyledLink internal={true} to="/staff#ErikWeberg1">Erik Weberg</StyledLink>
+        We are a zesty, high-energy dance weekend for experienced dancers.<br />
+        We will be using Larks and Robins.
       </Typography>
       <Typography variant="h6">
-        Music by <StyledLink internal={true} to="/staff#FineCompanions">Fine Companions</StyledLink>
+        Music by <StyledLink internal={true} to="/staff#FineCompanions">This Awesome Band and That Amazing Band</StyledLink>
       </Typography>
-      <Paragraph sx={{ mt: 0 }}>
-        (<StyledLink internal={true} to="/staff#BetsyBranch">Betsy Branch</StyledLink>, <StyledLink internal={true} to="/staff#LisaScott">Lisa Scott</StyledLink>, <StyledLink internal={true} to="/staff#BillTomczak">Bill Tomczak</StyledLink>, <StyledLink internal={true} to="/staff#ErikWeberg2">Erik Weberg</StyledLink>)
-      </Paragraph>
       <Typography variant="h6">
-        <p>Sound engineer <StyledLink internal={true} to="/staff#JohnOorthuys">John Oorthuys</StyledLink></p>
+        Calling by <StyledLink internal={true} to="/staff#FineCompanions">Seth Tepfer and Will Mentor</StyledLink>
+      </Typography>
+      <Typography variant="h6">
+        <p>Sound engineer <StyledLink internal={true} to="/staff#JohnOorthuys">Someone Awesome</StyledLink></p>
       </Typography>
 
       <Paragraph sx={{ my: 4 }}>
-        This year's Ball will be mask optional.<br />
-        We will no longer be verifying vaccination status.<br />
-        Signed waivers are no longer required.<br />
-        See the <StyledLink internal={true} to="/welcome">Welcome</StyledLink> page for more information.
+        Supersonic will follow the COVID & Mask Policies of the Seattle Emerald City and Lake City Contra Dances.
       </Paragraph>
 
       <Typography variant="h6">
-        Registration: $50/person
+        Registration: $120-300 sliding scale ($180 break-even)
       </Typography>
-      <Paragraph sx={{ mt: 0 }}>
-        Friday night dance is open to all and is not included in this fee.
-      </Paragraph>
-      <Paragraph>
-        Friday and Saturday events at<br />
-        <StyledLink to="https://www.oakspark.com/dance-pavilion">Oaks Park Dance Pavilion</StyledLink><br/>
-        <StyledLink to="https://goo.gl/maps/kEXUGHVriT88hvKG8">7805 SE Oaks Park Way, Portland, OR 97202</StyledLink>
-      </Paragraph>
+
+      <Typography variant="h6" sx={{mt: 2}}>
+        The venue is the Leif Erikson Hall in Ballard. 
+      </Typography>
 
       <SectionDivider/>
 
