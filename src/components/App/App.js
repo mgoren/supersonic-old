@@ -1,12 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from 'components/Static/Home';
-import Welcome from 'components/Static/Welcome';
+import About from 'components/Static/About';
 import Staff from 'components/Static/Staff';
-import Workshops from 'components/Static/Workshops';
-import Schedule from 'components/Static/Schedule';
-import Fragrance from 'components/Static/Fragrance';
+import Seattle from 'components/Static/Seattle';
 import Contact from 'components/Static/Contact';
-import Payment from 'components/Static/Payment';
+import Schedule from 'components/Static/Schedule';
 import Registration from 'components/Registration';
 import MaterialLayout from 'components/Layout/';
 // import * as S from './Global-styles';
@@ -19,13 +17,11 @@ export default function App() {
         <MaterialLayout>
           <Routes>
             <Route exact path="/" element=<Home /> />
-            <Route exact path="/welcome" element=<Welcome /> />
+            <Route exact path="/about" element=<About /> />
             <Route exact path="/staff" element=<Staff /> />
-            <Route exact path="/workshops" element=<Workshops /> />
             <Route exact path="/schedule" element=<Schedule /> />
-            <Route exact path="/fragrance" element=<Fragrance /> />
+            <Route exact path="/seattle" element=<Seattle /> />
             <Route exact path="/contact" element=<Contact /> />
-            <Route exact path="/waystopay" element=<Payment /> />
             <Route exact path="/registration" element=<Registration /> />
           </Routes>
         </MaterialLayout>

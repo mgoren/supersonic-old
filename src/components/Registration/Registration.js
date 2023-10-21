@@ -9,7 +9,7 @@ import IntroHeader from 'components/Header/IntroHeader';
 import OrderSummary from "components/OrderSummary";
 import Receipt from "components/Receipt";
 import { cache, cached } from 'utils';
-import { PAYPAL_OPTIONS, ORDER_DEFAULTS, TITLE, CONFIRMATION_CHECK_TITLE, CONFIRMATION_PAYPAL_TITLE } from "config";
+import { PAYMENT_METHODS, PAYPAL_OPTIONS, ORDER_DEFAULTS, TITLE, CONFIRMATION_CHECK_TITLE, CONFIRMATION_PAYPAL_TITLE } from "config";
 // import { PageTitle, Paragraph, StyledPaper, StyledLink } from 'components/Layout/SharedStyles';
 
 export default function Registration() {
@@ -61,8 +61,8 @@ const RealRegistration = () => {
   useEffect(() => { cache('order', order) }, [order]);
   useEffect(() => { cache('currentPage', currentPage) }, [currentPage]);
 
-  return (
-    <PayPalScriptProvider options={PAYPAL_OPTIONS}>
+  const content = (
+    <>
       {error && <Error error={error} />}
 
       <Header
@@ -97,6 +97,12 @@ const RealRegistration = () => {
           setCurrentPage={setCurrentPage}
         />
       }
+    </>
+  )
+
+  return PAYMENT_METHODS.includes('paypal') ?
+    <PayPalScriptProvider options={PAYPAL_OPTIONS}>
+      {content}
     </PayPalScriptProvider>
-  );
+  : content;
 }

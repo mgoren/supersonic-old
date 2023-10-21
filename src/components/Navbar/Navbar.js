@@ -6,11 +6,11 @@ import ColorModeToggle from 'components/ColorModeToggle';
 
 const pages = [
   { title: 'Home', path: '/' },
-  // { title: 'Welcome', path: '/welcome' },
+  { title: 'About', path: '/about' },
   { title: 'Bands & Callers', path: '/staff' },
-  // { title: 'Schedule', path: '/schedule' },
-  { title: 'Contact Us', path: '/contact' },
-  { title: 'Payment Info', path: '/waystopay' },
+  { title: 'Itinerary', path: '/schedule' },
+  { title: 'Seattle', path: '/seattle' },
+  { title: 'Contact', path: '/contact' },
   { title: 'Registration', path: '/registration' }
 ];
 
@@ -29,7 +29,7 @@ export default function Navbar({ toggleColorMode }) {
   };
 
   return (
-    <AppBar position="relative" color="default">
+    <AppBar position="relative" color="default" sx={{ height: '100px' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -62,9 +62,22 @@ export default function Navbar({ toggleColorMode }) {
                 </Link>
               ))}
             </Menu>
-            <ListItem sx={{ my: 2, color: 'inherit', display: 'block' }}>
+            {/* <ListItem sx={{ my: 2, color: 'inherit', display: 'block' }}>
               <Typography textAlign="center">ECD Ball 2023</Typography>
-            </ListItem>
+            </ListItem> */}
+          </Box>
+
+          {/* brand icon */}
+          <Box sx={{ display: { xs: 'none', md: 'inline' } }}>
+            <Link component={RouterLink} to='/'>
+              <img src={process.env.PUBLIC_URL + '/supersonic/sslogo-sidetext240x82.png'} alt="Supersonic logo" style={{ margin: '10px 10px 10px 0px' }}/>
+            </Link>
+          </Box>
+
+          <Box sx={{ display: { xs: 'inline', sm: 'inline', md: 'none' } }}>
+            <Link component={RouterLink} to='/'>
+              <img src={process.env.PUBLIC_URL + '/supersonic/sslogo-bitmap150x137.png'} alt="Supersonic logo" style={{ margin: '10px 10px 10px 0px', height: '80px' }}/>
+            </Link>
           </Box>
 
           {/* 2 line navbar for md screens */}

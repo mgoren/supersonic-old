@@ -12,7 +12,7 @@ export const STEPS = [
   {key: 'checkout', label: 'Checkout'}
 ];
 
-export const PAYMENT_METHODS = ['paypal', 'check']; // options are paypal and/or check (first is default)
+export const PAYMENT_METHODS = ['stripe', 'check']; // options are stripe, paypal, and/or check (first is default)
 
 export const TITLE = 'Supersonic 2024'
 export const CONFIRMATION_PAYPAL_TITLE = 'Supersonic Confirmation';

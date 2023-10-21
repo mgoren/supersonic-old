@@ -1,5 +1,5 @@
 import { Typography, Box, } from '@mui/material';
-import { StyledLink, StyledPaper, PageTitle, SectionDivider, Paragraph } from 'components/Layout/SharedStyles';
+import { StyledLink, StyledPaper, PageTitle, SectionDivider, Paragraph, Title } from 'components/Layout/SharedStyles';
 
 export default function Home() {
 
@@ -7,55 +7,61 @@ export default function Home() {
     <StyledPaper extraStyles={{ maxWidth: 750 }} align="center">
       <PageTitle>
         Supersonic Contra Dance<br />
-        2024 February 2&ndash;4<br />
-        Seattle
+        Leif Erikson Hall, Seattle<br />
+        2024 February 2 - 4
       </PageTitle>
 
       <Box mt={-5} mb={4}>
-        <img src={process.env.PUBLIC_URL + '/ecdball/ecdball-logo.jpg'} alt="ball logo" style={{ width: "100%", height: "auto" }} />
+        <img src={process.env.PUBLIC_URL + '/supersonic/dancer.jpg'} style={{ width: "100%", height: "auto" }} />
       </Box>
 
       <Typography variant="h6" sx={{ mb: 2 }}>
         We are a zesty, high-energy dance weekend for experienced dancers.<br />
-        We will be using Larks and Robins.
-      </Typography>
-      <Typography variant="h6">
-        Music by <StyledLink internal={true} to="/staff#FineCompanions">This Awesome Band and That Amazing Band</StyledLink>
-      </Typography>
-      <Typography variant="h6">
-        Calling by <StyledLink internal={true} to="/staff#FineCompanions">Seth Tepfer and Will Mentor</StyledLink>
-      </Typography>
-      <Typography variant="h6">
-        <p>Sound engineer <StyledLink internal={true} to="/staff#JohnOorthuys">Someone Awesome</StyledLink></p>
+        
       </Typography>
 
-      <Paragraph sx={{ my: 4 }}>
-        Supersonic will follow the COVID & Mask Policies of the Seattle Emerald City and Lake City Contra Dances.
+      <Paragraph sx={{ mb: 2 }}>
+        Supersonic will follow Covid & mask policies of the<br />
+        Seattle Emerald City and Lake City contra dances.
       </Paragraph>
 
-      <Typography variant="h6">
-        Registration: $120-300 sliding scale ($180 break-even)
-      </Typography>
+      <Paragraph>
+        Music by <StyledLink internal={true} to="/staff#band1">This Awesome Band</StyledLink> and <StyledLink internal={true} to="/staff#band2">That Amazing Band</StyledLink>
+      </Paragraph>
 
-      <Typography variant="h6" sx={{mt: 2}}>
-        The venue is the Leif Erikson Hall in Ballard. 
-      </Typography>
+      <Paragraph>
+        Calling by <StyledLink internal={true} to="/staff#caller1">Seth Tepfer</StyledLink> and <StyledLink internal={true} to="/staff#caller2">Will Mentor</StyledLink><br />
+        Role terms will be Larks and Robins.
+      </Paragraph>
+
+      <Paragraph>
+        Sound engineer <StyledLink internal={true} to="/staff#sound">Someone Awesome</StyledLink>
+      </Paragraph>
+
+      <Paragraph>
+        Registration: $120-300 sliding scale ($180 break-even)
+      </Paragraph>
 
       <SectionDivider/>
 
-      <Typography variant="h6">
-        Pre-Ball <StyledLink internal={true} to="/workshops">workshops</StyledLink>:
-      </Typography>
-      <Paragraph sx={{ mt: 1 }}>
-        <strong>3-5pm on Sept 24, Oct 15, and Oct 29</strong><br />
-        <StyledLink to="https://www.renpdx.org/">A Renaissance School</StyledLink><br />
-        <StyledLink to="https://goo.gl/maps/M2CBrKV3KKJkuTb8A">234 S Bancroft St, Portland, OR 97239</StyledLink>
+      <Paragraph>
+        We will be dancing primarily complex contras with limited or no walkthroughs.<br />
+        Many participants easily dance both roles and role switching is common.
+      </Paragraph>
+
+      <Paragraph>
+        Supersonic Contra Dance Weekend gives experienced dancers the opportunity to explore ways in which to challenge themselves and improve their skills as dance partners while experiencing complex dances and immense joy.
+      </Paragraph>
+
+      <Paragraph>
+        We begin the weekend with no walkthrough contra corners. Are you comfortable navigating complex dances often with no walkthroughs or hash calls? Do you recover quickly from mistakes? If you answered yes, this weekend is for you.
       </Paragraph>
 
       <SectionDivider/>
 
       <Typography variant="h4" fontStyle="italic" gutterBottom>
-      <StyledLink internal={true} to="/registration">Registration Open</StyledLink>
+      {/* <StyledLink internal={true} to="/registration">Registration open</StyledLink> */}
+      Registration opening at the end of October
       </Typography>
     </StyledPaper>
   );

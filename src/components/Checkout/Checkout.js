@@ -13,6 +13,7 @@ import ButtonRow from 'components/ButtonRow/index.js';
 import { StyledPaper, Title } from 'components/Layout/SharedStyles';
 import { Hidden } from '@mui/material';
 import { MyMobileStepper } from 'components/MyStepper';
+import StripeCheckout from "components/StripeCheckout";
 
 export default function Checkout({ order, setOrder, setError, setCurrentPage }) {
   const [paying, setPaying] = useState(null);
@@ -77,6 +78,10 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
 
         {!processing &&
           <Title>Amount due: ${total}</Title>
+        }
+
+        {paymentMethod === 'stripe' &&
+          <StripeCheckout />
         }
 
         {paymentMethod === 'paypal' &&
