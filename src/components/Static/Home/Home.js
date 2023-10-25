@@ -26,7 +26,7 @@ export default function Home() {
       </Paragraph>
 
       <Paragraph>
-        Music by <StyledLink internal={true} to="/staff#band1">This Awesome Band</StyledLink> and <StyledLink internal={true} to="/staff#band2">That Amazing Band</StyledLink>
+        Music by <StyledLink internal={true} to="/staff#band1">Notorious</StyledLink> and <StyledLink internal={true} to="/staff#band2">Playing with Fyre</StyledLink>
       </Paragraph>
 
       <Paragraph>

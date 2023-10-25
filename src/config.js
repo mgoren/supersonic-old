@@ -24,7 +24,7 @@ export const CONTACT_TRACING_URL = 'pcdc.fun/contact-trace';
 export const WAIVER_URL = 'pcdc.fun/files/PCDC_Events_Waiver.pdf';
 export const PAYPAL_ME_URL = 'paypal.me/PortlandBall';
 
-export const ADMISSION_COST_RANGE = [120, 300];
+export const ADMISSION_COST_RANGE = [120, 280];
 export const ADMISSION_COST_DEFAULT = 180;
 export const ADMISSION_QUANTITY_RANGE = [1, 2];
 export const DONATION_OPTION = true;

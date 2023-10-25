@@ -44,50 +44,37 @@ export default function Staff() {
 
       <SectionDivider />
 
-      <Header id="band1">Music by <em>An Awesome Band</em></Header>
+      <Header id="band1">Music by <em>Notorious</em></Header>
       <Box>
         <Box sx={{ mt: 2, pl: { xs: 'none', sm: 4 }, float: { xs: 'none', sm: 'right' } }}>
-          <img src={process.env.PUBLIC_URL + '/ecdball/FineCompanions.png'} alt="Fine Companions"  style={{ width: 225 }} />
+          <img src={process.env.PUBLIC_URL + '/supersonic/tmp/png'} alt="Notorious"  style={{ width: 225 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
-        Start with four great talents, mix in some magic and get a musical 
-        feast better than the sum of its ingredients.   This Portland favorite 
-        just keeps growing their reputation and it's all good!  The band features 
-        Betsy Branch on fiddle, Lisa Scott on piano, Bill Tomczak on clarinet & 
-        saxophone, and Erik Weberg on flute. If you like lots of dreamy textures 
-        and rich harmonies, this is the band for you!
+          Bio here
         </Paragraph>
       </Box>
       <Box sx={{ clear: 'both' }} />
 
-      <Header id="band2">Music by <em>Another Awesome Band</em></Header>
+      <Header id="band2">Music by <em>Playing with Fyre</em></Header>
       <Box>
         <Box sx={{ mt: 2, pr: { xs: 'none', sm: 4 }, float: { xs: 'none', sm: 'left' } }}>
-          <img src={process.env.PUBLIC_URL + '/ecdball/FineCompanions.png'} alt="Fine Companions"  style={{ width: 225 }} />
+          <img src={process.env.PUBLIC_URL + '/supersonic/tmp.png'} alt="Playing with Fyre"  style={{ width: 225 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
-        Start with four great talents, mix in some magic and get a musical 
-        feast better than the sum of its ingredients.   This Portland favorite 
-        just keeps growing their reputation and it's all good!  The band features 
-        Betsy Branch on fiddle, Lisa Scott on piano, Bill Tomczak on clarinet & 
-        saxophone, and Erik Weberg on flute. If you like lots of dreamy textures 
-        and rich harmonies, this is the band for you!
+          Bio here
         </Paragraph>
       </Box>
       <Box sx={{ clear: 'both' }} />
 
       <SectionDivider />
 
-      <Header id="sound">Sound by <em>Someone Great</em></Header>
+      <Header id="sound">Sound by <em>???</em></Header>
       <Box>
         <Box sx={{ mt: 2, pl: { xs: 'none', sm: 3 }, float: { xs: 'none', sm: 'right' } }}>
-          <img src={process.env.PUBLIC_URL + '/ecdball/JohnOorthuys.jpg'} alt="John Oorthuys" style={{ width: 225 }} />
+          <img src={process.env.PUBLIC_URL + '/supersonic/tmp.jpg'} alt="???" style={{ width: 225 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
-        Highly regarded by dancers, musicians, and callers for his high-quality sound work, John 
-        Oorthuys has handled the sound board for many dances, balls, camps, and special events for 
-        PCDC and surrounding Pacific Northwest communities. He has been the Ball sound engineer 
-        for years and years, and his wizardry makes the sound fantastic.
+          Bio here
         </Paragraph>
       </Box>
       <Box sx={{ clear: 'both' }} />
