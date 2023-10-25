@@ -1,5 +1,11 @@
 # Configuration
 
+**Stripe configuration**
+- On Stripe console, disable all payment methods except Cards, Apple Pay, Google Pay
+- Use test keys until ready to launch
+
+**Also see README files inside the functions folder!**
+
 **Setup Firebase:**
 - Create firebase project and add to app, including firebase hosting
 - Fill in firebaseConfig values in `.env` file (see `.env.example`)

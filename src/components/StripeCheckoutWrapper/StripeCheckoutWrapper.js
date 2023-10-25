@@ -16,7 +16,7 @@ export default function StripeCheckoutWrapper({ total, saveOrderToFirebase }) {
   
   const fetchClientSecret = async () => {
     try {
-      const response = await fetch('http://localhost:5001/supersonic-fc15a/us-central1/getClientSecret');
+      const response = await fetch('http://localhost:5001/supersonic-fc15a/us-central1/createStripePaymentIntent');
       const data = await response.json();
       setClientSecret(data.clientSecret);
     } catch (error) {
