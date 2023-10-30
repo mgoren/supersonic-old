@@ -13,11 +13,12 @@ const firebaseFunctionsBaseUrlDevelopment = "http://localhost:5001/supersonic-fc
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 const firebaseFunctionsBaseUrl = process.env.NODE_ENV === 'production' ? firebaseFunctionsBaseUrlProduction : firebaseFunctionsBaseUrlDevelopment;
 
-export default function StripeCheckoutWrapper({ total, email, processing, setProcessing, setError, saveOrderToFirebase }) {
+export default function StripeCheckoutWrapper({ total, name, email, processing, setProcessing, setError, saveOrderToFirebase }) {
   const [clientSecret, setClientSecret] = useState(null);
   const clientSecretRef = useRef(null);
 
   const createPaymentIntent = useCallback(async () => {
+    console.log('creating payment intent for', name, email);
     try {
       const response = await fetch(`${firebaseFunctionsBaseUrl}/createStripePaymentIntent`, {
         method: 'POST',
@@ -26,6 +27,7 @@ export default function StripeCheckoutWrapper({ total, email, processing, setPro
         },
         body: JSON.stringify({
           amount: total, // amount in dollars
+          name,
           email
         }),
       });
@@ -34,7 +36,7 @@ export default function StripeCheckoutWrapper({ total, email, processing, setPro
     } catch (error) {
       console.error(error);
     }
-  }, [total, email]);
+  }, [total, name, email]);
   
   const cancelPaymentIntent = async () => {
     const paymentIntentId = clientSecretRef.current.split('_secret_')[0];

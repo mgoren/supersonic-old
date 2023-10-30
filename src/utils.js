@@ -74,3 +74,5 @@ const emailConfirmationIsFirstInvalidField = (errors) => {
   const fieldsBeforeEmailConfirmation = fields.slice(0, fields.indexOf('emailConfirmation'));
   return !errors.people || !errors.people[0] || !fieldsBeforeEmailConfirmation.some(field => errors.people[0][field]);
 };
+
+export const fullName = (person) => `${person.first} ${person.last}`;

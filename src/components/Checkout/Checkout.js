@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { push, ref, serverTimestamp } from "firebase/database";
 import { renderToStaticMarkup } from 'react-dom/server';
-import { scrollToTop, warnBeforeUserLeavesSite } from 'utils';
+import { scrollToTop, warnBeforeUserLeavesSite, fullName } from 'utils';
 import { PAYMENT_METHODS, EMAIL_CONTACT, NUM_PAGES } from 'config';
 import db from 'firebase.js';
 import PaypalCheckoutButton from 'components/PaypalCheckoutButton';
@@ -93,7 +93,8 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
         {paymentMethod === 'stripe' &&
           <StripeCheckoutWrapper
             total={total}
-            email={order.confirmationEmail}
+            name={fullName(order.people[0])}
+            email={order.people[0].email}
             setError={setError}
             processing={processing} setProcessing={setProcessing}
             saveOrderToFirebase={saveOrderToFirebase}

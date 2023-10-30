@@ -10,19 +10,29 @@ const allowedOrigin = process.env.FUNCTIONS_EMULATOR ? "http://localhost:3000" :
 exports.createStripePaymentIntent = functions.https.onRequest((req, res) => {
   cors({ origin: allowedOrigin })(req, res, async () => {
     if (req.method === "POST") {
-      const { amount, email } = req.body; // Grab the amount from the request body
+      const { amount, name, email } = req.body;
+
+      let customer;
+      const existingCustomers = await stripe.customers.list({ email, limit: 1 });
+      if (existingCustomers.data.length) {
+        customer = existingCustomers.data[0].id;
+      } else {
+        const newCustomer = await stripe.customers.create({ name, email });
+        customer = newCustomer.id;
+      }
+
       try {
         const paymentIntent = await stripe.paymentIntents.create({
           amount: amount * 100, // amount in cents
           currency: "usd",
-          description: email,
-          receipt_email: email,
+          customer
         });
         res.status(200).json({ clientSecret: paymentIntent.client_secret });
       } catch (error) {
         console.error(error);
         res.status(500).send("Server error");
       }
+
     } else {
       res.set('Allow', 'POST');
       res.status(405).send('Method Not Allowed');
