@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { VOLUNTEER_OPTIONS, HOSPITALITY_OPTIONS } from 'config';
+import { HOSPITALITY_OPTIONS } from 'config';
 
 export default function OrderSummary({ order, currentPage }) {
   const total = order.admissionCost * order.admissionQuantity + order.donation;

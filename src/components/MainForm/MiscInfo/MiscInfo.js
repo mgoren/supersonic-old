@@ -3,7 +3,7 @@ import { scrollToTop, mailtoLink } from 'utils.js';
 import { Input, CheckboxInput } from '../Input';
 import { StyledPaper, Title, StyledLink } from 'components/Layout/SharedStyles';
 import { Box, Typography } from '@mui/material';
-import { EMAIL_CONTACT, HOSPITALITY_OPTIONS, SCHOLARSHIP_OPTIONS, SHARE_OPTIONS } from 'config';
+import { EMAIL_CONTACT, HOSPITALITY_OPTIONS, SHARE_OPTIONS } from 'config';
 
 export default function MiscInfo() {
   useEffect(() => { scrollToTop(); },[])

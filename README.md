@@ -12,6 +12,13 @@
 - Create Firebase Realtime Database in test mode
 - Fill in DB URL (likely includes `rtdb.firebaseio.com`) as _REACT_APP_FIREBASE_DATABASE_URL_ in `.env` file
 
+**Setup Places API:**
+- Activate both Places API and Maps Javascript API
+- Create API key in Google cloud console with access to both those APIs, limit to `http://localhost:3000/*` and `https://www.[website].com/*`
+
+**Setup Recaptcha:**
+- Activate Recaptcha v2 not a robot checkbox and copy site key
+
 **Development:**
 Set environment variables in `.env`
 

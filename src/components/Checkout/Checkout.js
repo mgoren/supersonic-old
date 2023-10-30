@@ -13,7 +13,7 @@ import ButtonRow from 'components/ButtonRow/index.js';
 import { StyledPaper, Title } from 'components/Layout/SharedStyles';
 import { Hidden } from '@mui/material';
 import { MyMobileStepper } from 'components/MyStepper';
-import StripeCheckout from "components/StripeCheckoutWrapper";
+import StripeCheckoutWrapper from "components/StripeCheckoutWrapper";
 
 export default function Checkout({ order, setOrder, setError, setCurrentPage }) {
   const [paying, setPaying] = useState(null);
@@ -37,15 +37,24 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
     setCurrentPage(NUM_PAGES);
   }
 
-	const saveOrderToFirebase = (paypalOrder) => {
+	const saveOrderToFirebase = (electronicOrder) => {
     // console.log(`paid via ${paymentMethod}`);
+
+    let electronicPaymentId = '';
+    if (paymentMethod === 'check') {
+      electronicPaymentId = 'check';
+    } else if (paymentMethod === 'paypal') {
+      electronicPaymentId = electronicOrder.payer.email_address;
+    } else if (paymentMethod === 'stripe') {
+      electronicPaymentId = electronicOrder.paymentIntent.id;
+    }
 
     const updatedOrder = {
       ...order,
       people: order.people.slice(0, order.admissionQuantity).map(updateApartment),
       total,
       deposit: paymentMethod === 'check' ? 0 : total,
-      paypalEmail: paymentMethod === 'check' ? 'check' : paypalOrder.payer.email_address,
+      electronicPaymentId,
       timestamp: serverTimestamp()
     };
     const receipt = renderToStaticMarkup(<Receipt order={updatedOrder} currentPage='confirmation' />);
@@ -59,6 +68,7 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
       // cache('lastCompletedOrder', updatedOrderWithReceipt);
       setPaying(false);
       setProcessing(false);
+      // reset client secret for stripe payment if using stripe
       setCurrentPage('confirmation');
 		})
 		.catch((err) => {
@@ -81,8 +91,11 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
         }
 
         {paymentMethod === 'stripe' &&
-          <StripeCheckout 
+          <StripeCheckoutWrapper
             total={total}
+            email={order.confirmationEmail}
+            setError={setError}
+            processing={processing} setProcessing={setProcessing}
             saveOrderToFirebase={saveOrderToFirebase}
           />
         }
@@ -107,7 +120,7 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
           </>
         }
 
-        {!paying && !processing && (paymentMethod === 'check' || paypalButtonsLoaded) &&
+        {!paying && !processing && (paymentMethod === 'check' || paymentMethod === 'stripe' || paypalButtonsLoaded) &&
           <TogglePaymentMode paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} />
         }
       </StyledPaper>

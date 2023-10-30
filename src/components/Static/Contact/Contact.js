@@ -1,5 +1,4 @@
-import { Box, } from '@mui/material';
-import { StyledPaper, Paragraph, Header, PageTitle, StyledLink } from 'components/Layout/SharedStyles';
+import { StyledPaper, Paragraph, PageTitle, StyledLink } from 'components/Layout/SharedStyles';
 import { EMAIL_CONTACT } from 'config';
 import { mailtoLink } from 'utils';
 

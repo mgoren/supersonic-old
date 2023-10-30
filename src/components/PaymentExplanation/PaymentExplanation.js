@@ -1,7 +1,7 @@
 import { EMAIL_CONTACT } from "config";
 import { mailtoLink } from "utils";
 import { StyledLink, StyledPaper, Title } from 'components/Layout/SharedStyles';
-import { Divider, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 export default function PaymentExplanation() {
   return (

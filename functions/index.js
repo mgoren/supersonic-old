@@ -1,5 +1,6 @@
-const { createStripePaymentIntent } = require('./stripe');
+const { createStripePaymentIntent, cancelStripePaymentIntent } = require('./stripe');
 exports.createStripePaymentIntent = createStripePaymentIntent;
+exports.cancelStripePaymentIntent = cancelStripePaymentIntent;
 
 // need to also import & export here all functions needed for email-confirmation & google-sheet-sync
 

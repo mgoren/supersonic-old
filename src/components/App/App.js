@@ -7,6 +7,8 @@ import Contact from 'components/Static/Contact';
 import Schedule from 'components/Static/Schedule';
 import Registration from 'components/Registration';
 import MaterialLayout from 'components/Layout/';
+import Error from 'components/Error';
+import { EMAIL_CONTACT } from 'config';
 // import * as S from './Global-styles';
 
 export default function App() {
@@ -23,6 +25,7 @@ export default function App() {
             <Route exact path="/seattle" element=<Seattle /> />
             <Route exact path="/contact" element=<Contact /> />
             <Route exact path="/registration" element=<Registration /> />
+            <Route exact path="/error-contact-support" element=<Error error={`Unexpected payment processing error. Please email ${EMAIL_CONTACT}`} /> />
           </Routes>
         </MaterialLayout>
       </Router>

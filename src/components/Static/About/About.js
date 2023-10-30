@@ -10,7 +10,7 @@ export default function About() {
       </PageTitle>
 
       <Box mt={-5} mb={4}>
-        <img src={process.env.PUBLIC_URL + '/supersonic/hands.jpg'} style={{ width: "100%", height: "auto" }} />
+        <img src={process.env.PUBLIC_URL + '/supersonic/hands.jpg'} alt='' style={{ width: "100%", height: "auto" }} />
       </Box>
 
       <Header>

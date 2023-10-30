@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { EMAIL_CONTACT, DETAILS_URL, WAIVER_URL, PAYPAL_ME_URL } from 'config';
+import { EMAIL_CONTACT, PAYPAL_ME_URL } from 'config';
 import { mailtoLink, websiteLink, scrollToTop } from 'utils';
 import OrderSummary from 'components/OrderSummary';
 import { StyledLink } from 'components/Layout/SharedStyles';
@@ -53,10 +53,8 @@ function PaypalReceipt({ order }) {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
-        We're excited to have you attend this year's Ball. 
-        Your payment to PCDC for ${order.total} has been successfully processed. 
-        Your name will be on a list at the door. (You will not receive a physical ticket.) 
-        Please note that there is a $3 daily parking fee at Oaks Park. This is not included in your registration.
+        We're excited to have you attend this year's Supersonic. 
+        Your payment for ${order.total} has been successfully processed. 
       </Typography>
 
       <SharedReceipt />
@@ -72,9 +70,7 @@ export function AdditionalPersonReceipt({ order }) {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
-        We're excited to have you attend this year's Ball. 
-        Your name will be on a list at the door. (You will not receive a physical ticket.) 
-        Please note that there is a $3 daily parking fee at Oaks Park. This is not included in your registration.
+        We're excited to have you attend this year's Supersonic. 
       </Typography>
 
       <SharedReceipt />
@@ -86,26 +82,11 @@ export function SharedReceipt() {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
-        COVID Policy: Masks are optional at this year's Ball. 
-        Per PCDC policy, vaccination / booster status is no longer verified. 
-        Signed waivers are still required. 
-        If you have not signed a PCDC waiver, you may download a waiver <StyledLink to={websiteLink(WAIVER_URL)}>here</StyledLink> to bring with you. 
-        We will also have copies at the Ball.
+        If you are able to volunteer, please contact <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
-        If you requested a scholarship, David will be in touch with you shortly. 
-        If you indicated that you could volunteer, Janet will be in touch a few weeks before the Ball. 
-        If you can offer hospitality or are requesting hospitality (Limited), Cynthia will be in touch in a few weeks.
-      </Typography>
-
-      <Typography component='p' sx={{ mt: 2 }}>
-        We intend to send out the Ball booklets that also include maps to venues during August. 
-        Please have a look at <StyledLink to={websiteLink(DETAILS_URL)}>{DETAILS_URL}</StyledLink> for more information such as Ball instructions and Ball workshops.
-      </Typography>
-
-      <Typography component='p' sx={{ mt: 2 }}>
-        Questions:  Contact David at <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.
+        Questions:  Contact Karen at <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.
       </Typography>
     </>
   );

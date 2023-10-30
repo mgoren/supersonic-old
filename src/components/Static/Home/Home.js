@@ -1,5 +1,5 @@
 import { Typography, Box, } from '@mui/material';
-import { StyledLink, StyledPaper, PageTitle, SectionDivider, Paragraph, Title } from 'components/Layout/SharedStyles';
+import { StyledLink, StyledPaper, PageTitle, SectionDivider, Paragraph } from 'components/Layout/SharedStyles';
 
 export default function Home() {
 
@@ -12,7 +12,7 @@ export default function Home() {
       </PageTitle>
 
       <Box mt={-5} mb={4}>
-        <img src={process.env.PUBLIC_URL + '/supersonic/dancer.jpg'} style={{ width: "100%", height: "auto" }} />
+        <img src={process.env.PUBLIC_URL + '/supersonic/dancer.jpg'} alt='' style={{ width: "100%", height: "auto" }} />
       </Box>
 
       <Typography variant="h6" sx={{ mb: 2 }}>

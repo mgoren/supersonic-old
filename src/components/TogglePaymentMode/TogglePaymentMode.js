@@ -1,18 +1,18 @@
 import { Typography, Button } from '@mui/material';
 import { PAYMENT_METHODS } from 'config';
 
-const switchToCheckText = 'pay by check';
+const switchToCheckText = '(or pay by check)';
 const switchToPaypalText = '(or view electronic payment options)';
 
 export default function TogglePaymentMode({ paymentMethod, setPaymentMethod }) {
   const text = paymentMethod === 'check' ? switchToPaypalText : switchToCheckText;
-  const togglePaymentMethod = () => setPaymentMethod(paymentMethod === 'check' ? 'paypal' : 'check');
+  const togglePaymentMethod = () => setPaymentMethod(paymentMethod === 'check' ? PAYMENT_METHODS[0] : 'check');
 
   return (
     <>
-      {PAYMENT_METHODS.includes('check') && PAYMENT_METHODS.includes('paypal') &&
+      {PAYMENT_METHODS.includes('check') &&
         <Typography align='center'>
-          <Button size='small' color='secondary' variant='contained' sx={{ my: 2 }} onClick={() => togglePaymentMethod()}>
+          <Button size='small' color='secondary' sx={{ my: 2 }} onClick={() => togglePaymentMethod()}>
             {text}
           </Button>
         </Typography>

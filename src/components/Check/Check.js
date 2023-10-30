@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import Reaptcha from 'reaptcha';
-import { CAPTCHA_KEY, PAYPAL_ME_URL } from 'config';
-import { websiteLink } from 'utils';
+import { CAPTCHA_KEY } from 'config';
 import { Typography, Box, Button } from '@mui/material';
-import { StyledLink } from 'components/Layout/SharedStyles';
 
 export default function Check({ saveOrderToFirebase, processing, setProcessing }) {
   const [verified, setVerified] = useState(false);

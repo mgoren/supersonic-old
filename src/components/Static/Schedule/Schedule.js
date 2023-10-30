@@ -1,5 +1,5 @@
 import { Box, List, ListItem } from '@mui/material';
-import { StyledLink, StyledPaper, PageTitle, Paragraph, Header } from 'components/Layout/SharedStyles';
+import { StyledPaper, PageTitle, Header } from 'components/Layout/SharedStyles';
 
 export default function Schedule() {
 
@@ -10,7 +10,7 @@ export default function Schedule() {
       </PageTitle>
 
       <Box mt={-5} mb={4}>
-        <img src={process.env.PUBLIC_URL + '/supersonic/instruments.jpg'} style={{ width: "100%", height: "auto" }} />
+        <img src={process.env.PUBLIC_URL + '/supersonic/instruments.jpg'} alt='' style={{ width: "100%", height: "auto" }} />
       </Box>
 
       <Header>
