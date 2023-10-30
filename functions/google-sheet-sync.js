@@ -67,6 +67,7 @@ exports.oauthcallback = functions.https.onRequest(async (req, res) => {
   try {
     const { tokens } = await functionsOauthClient.getToken(code);
     // Now tokens contains an access_token and an optional refresh_token. Save them.
+    console.log(`tokens: ${JSON.stringify(tokens)}`);
     await admin.database().ref(DB_TOKEN_PATH).set(tokens);
     res.status(200).send('App successfully configured with new Credentials. '
         + 'You can now close this page.');
@@ -82,7 +83,7 @@ exports.appendrecordtospreadsheet = functions.database.ref(`${CONFIG_DATA_PATH}/
       const createdAt = new Date(newRecord.timestamp).toLocaleDateString();
       const orders = splitOrder(newRecord);
       const promises = orders.map((order) => {
-        const { first, last, nametag, email, phone, address, apartment, city, state, zip, country, volunteer, hospitality, scholarship, share, comments, admissionQuantity, admissionCost, donation, total, deposit, owed, purchaser, paypalEmail } = order;
+        const { first, last, nametag, email, phone, address, apartment, city, state, zip, country, volunteer, hospitality, scholarship, share, comments, admissionQuantity, admissionCost, donation, total, deposit, owed, purchaser, electronicPaymentId } = order;
         // fields must be in the same order as the columns in the spreadsheet
         const fields = {
           first,
@@ -108,11 +109,11 @@ exports.appendrecordtospreadsheet = functions.database.ref(`${CONFIG_DATA_PATH}/
           owed,
           purchaser,
           createdAt,
-          paypalEmail
+          electronicPaymentId
         };
         return appendPromise({
           spreadsheetId: CONFIG_SHEET_ID,
-          range: 'A:M',
+          range: 'A:X',
           valueInputOption: 'USER_ENTERED',
           insertDataOption: 'INSERT_ROWS',
           resource: {
@@ -125,6 +126,7 @@ exports.appendrecordtospreadsheet = functions.database.ref(`${CONFIG_DATA_PATH}/
 
 // accepts an append request, returns a Promise to append it, enriching it with auth
 function appendPromise(requestWithoutAuth) {
+  console.log('in appendPromise');
   return new Promise((resolve, reject) => {
     return getAuthorizedClient().then((client) => {
       const sheets = google.sheets('v4');
@@ -143,19 +145,20 @@ function appendPromise(requestWithoutAuth) {
 
 // checks if oauthTokens have been loaded into memory, and if not, retrieves them
 async function getAuthorizedClient() {
+  console.log('in getAuthorizedClient at start oauthTokens', oauthTokens);
   if (oauthTokens) {
     return functionsOauthClient;
   }
   const snapshot = await admin.database().ref(DB_TOKEN_PATH).once('value');
   oauthTokens = snapshot.val();
+  console.log('in getAuthorizedClient at end oauthTokens', oauthTokens);
   functionsOauthClient.setCredentials(oauthTokens);
   return functionsOauthClient;
 }
-const PERSON_FIELDS = ['first', 'last', 'nametag', 'email', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
 
 function splitOrder(order) {
   let orders = [];
-  const { volunteer, hospitality, scholarship, share, comments, admissionQuantity, admissionCost, donation, total, deposit, paypalEmail } = order;
+  const { volunteer, hospitality, scholarship, share, comments, admissionQuantity, admissionCost, donation, total, deposit, electronicPaymentId } = order;
   const owed = total - deposit;
   const purchaser = order.people[0].first + ' ' + order.people[0].last;
   for (const person of order.people) {
@@ -184,7 +187,7 @@ function splitOrder(order) {
         total,
         deposit,
         owed,
-        paypalEmail
+        electronicPaymentId
       });
     } else {
       orders.push({

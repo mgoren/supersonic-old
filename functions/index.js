@@ -2,7 +2,15 @@ const { createStripePaymentIntent, cancelStripePaymentIntent } = require('./stri
 exports.createStripePaymentIntent = createStripePaymentIntent;
 exports.cancelStripePaymentIntent = cancelStripePaymentIntent;
 
-// need to also import & export here all functions needed for email-confirmation & google-sheet-sync
+const { authgoogleapi, oauthcallback, appendrecordtospreadsheet } = require('./google-sheet-sync');
+exports.authgoogleapi = authgoogleapi;
+exports.oauthcallback = oauthcallback;
+exports.appendrecordtospreadsheet = appendrecordtospreadsheet;
+
+// const { sendEmailConfirmation } = require('./email-confirmation');
+// exports.sendEmailConfirmation = sendEmailConfirmation;
+
+
 
 /**
  * Import function triggers from their respective submodules:
