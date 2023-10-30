@@ -47,7 +47,7 @@ export default function Staff() {
       <Header id="band1">Music by <em>Notorious</em></Header>
       <Box>
         <Box sx={{ mt: 2, pl: { xs: 'none', sm: 4 }, float: { xs: 'none', sm: 'right' } }}>
-          <img src={process.env.PUBLIC_URL + '/supersonic/tmp/png'} alt="Notorious"  style={{ width: 225 }} />
+          <img src={process.env.PUBLIC_URL + '/supersonic/notorious.jpeg'} alt="Notorious"  style={{ width: 300 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
           Bio here
@@ -58,20 +58,7 @@ export default function Staff() {
       <Header id="band2">Music by <em>Playing with Fyre</em></Header>
       <Box>
         <Box sx={{ mt: 2, pr: { xs: 'none', sm: 4 }, float: { xs: 'none', sm: 'left' } }}>
-          <img src={process.env.PUBLIC_URL + '/supersonic/tmp.png'} alt="Playing with Fyre"  style={{ width: 225 }} />
-        </Box>
-        <Paragraph sx={{ pt: 1, mb: 0 }}>
-          Bio here
-        </Paragraph>
-      </Box>
-      <Box sx={{ clear: 'both' }} />
-
-      <SectionDivider />
-
-      <Header id="sound">Sound by <em>???</em></Header>
-      <Box>
-        <Box sx={{ mt: 2, pl: { xs: 'none', sm: 3 }, float: { xs: 'none', sm: 'right' } }}>
-          <img src={process.env.PUBLIC_URL + '/supersonic/tmp.jpg'} alt="???" style={{ width: 225 }} />
+          <img src={process.env.PUBLIC_URL + '/supersonic/playing-with-fyre.png'} alt="Playing with Fyre"  style={{ width: 300 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
           Bio here

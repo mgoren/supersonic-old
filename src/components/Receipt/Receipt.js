@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { EMAIL_CONTACT, PAYPAL_ME_URL } from 'config';
-import { mailtoLink, websiteLink, scrollToTop } from 'utils';
+import { EMAIL_CONTACT } from 'config';
+import { mailtoLink, scrollToTop } from 'utils';
 import OrderSummary from 'components/OrderSummary';
 import { StyledLink } from 'components/Layout/SharedStyles';
 import { Divider, Typography } from '@mui/material';
@@ -10,7 +10,7 @@ export default function Receipt({ order }) {
   return(
     <>
       <p>Thanks, {order.people[0].first}!</p>
-      {order.paypalEmail === 'check' ? <CheckReceipt order={order}/> : <PaypalReceipt order={order }/>}
+      {order.electronicPaymentId === 'check' ? <CheckReceipt order={order}/> : <PaypalReceipt order={order }/>}
     </>
   );
 }
@@ -24,20 +24,13 @@ function CheckReceipt({ order }) {
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
-        Make your check out to PCDC, write your name in the memo area, and mail to:
+        Make your check out to Karen Marshall, write your name in the memo area, and mail to:
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
-        Portland ECD Ball<br />
-        David Macemon<br />
-        19936 Derby St<br />
-        West Linn, OR 97068
-      </Typography>
-
-      <Typography component='p' sx={{ mt: 2 }}>
-        Alternatively, you can pay via PayPal.Me <StyledLink to={websiteLink(PAYPAL_ME_URL)}>here</StyledLink>. 
-        This requires you to have a PayPal account, but you can sign up for one on the spot. You can then pay by credit card, debit card, or your bank account. 
-        Please specify the registration amount and "Add a Note" to include your name. 
+        Karen Marshall<br />
+        PO Box 1173<br />
+        Anacortes, WA 98221
       </Typography>
 
       <SharedReceipt />

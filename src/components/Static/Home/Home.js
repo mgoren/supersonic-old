@@ -61,7 +61,7 @@ export default function Home() {
 
       <Typography variant="h4" fontStyle="italic" gutterBottom>
       {/* <StyledLink internal={true} to="/registration">Registration open</StyledLink> */}
-      Registration opening at the end of October
+      Registration opening in early November
       </Typography>
     </StyledPaper>
   );

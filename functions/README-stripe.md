@@ -10,13 +10,15 @@ not actually doing anything with this yet:
 gcloud auth application-default login // create ADC for use with auth (https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev)
 ```
 
-For testing:
+# Testing
+
 ```
 firebase functions:config:get > .runtimeconfig.json // file must be in functions dir
 firebase emulators:start --only functions
 ```
 
-When ready to deploy:
+# Deployment
+
 ```
 firebase deploy --only functions
 ```

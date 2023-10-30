@@ -2,9 +2,7 @@ const { createStripePaymentIntent, cancelStripePaymentIntent } = require('./stri
 exports.createStripePaymentIntent = createStripePaymentIntent;
 exports.cancelStripePaymentIntent = cancelStripePaymentIntent;
 
-const { authgoogleapi, oauthcallback, appendrecordtospreadsheet } = require('./google-sheet-sync');
-exports.authgoogleapi = authgoogleapi;
-exports.oauthcallback = oauthcallback;
+const { appendrecordtospreadsheet } = require('./google-sheet-sync');
 exports.appendrecordtospreadsheet = appendrecordtospreadsheet;
 
 // const { sendEmailConfirmation } = require('./email-confirmation');
