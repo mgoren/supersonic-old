@@ -50,7 +50,7 @@ export default function Staff() {
           <img src={process.env.PUBLIC_URL + '/supersonic/notorious.jpeg'} alt="Notorious"  style={{ width: 300 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
-          Bio here
+          More info coming soon...
         </Paragraph>
       </Box>
       <Box sx={{ clear: 'both' }} />
@@ -61,7 +61,7 @@ export default function Staff() {
           <img src={process.env.PUBLIC_URL + '/supersonic/playing-with-fyre.png'} alt="Playing with Fyre"  style={{ width: 300 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
-          Bio here
+          More info coming soon...
         </Paragraph>
       </Box>
       <Box sx={{ clear: 'both' }} />

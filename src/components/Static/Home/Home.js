@@ -39,7 +39,7 @@ export default function Home() {
       </Paragraph>
 
       <Paragraph>
-        Registration: $120-300 sliding scale ($180 break-even)
+        Registration: $120-280 sliding scale ($180 break-even)
       </Paragraph>
 
       <SectionDivider/>

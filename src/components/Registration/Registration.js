@@ -65,7 +65,7 @@ const RealRegistration = () => {
   const content = (
     <>
       {SANDBOX_MODE &&
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '3rem', backgroundColor: 'pink' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '3rem', backgroundColor: 'var(--color-error)' }}>
           TEST MODE ONLY - DO NOT USE FOR REAL REGISTRATION
         </Box>
       }

@@ -79,7 +79,7 @@ export default function StripeCheckoutWrapper({ total, name, email, processing, 
   return (
     <>
       {SANDBOX_MODE &&
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '3rem', my: 2, backgroundColor: 'pink' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '3rem', my: 2, backgroundColor: 'var(--color-error)' }}>
           Testing: 4242424242424242 / any future expiration / any cvc / any zip
         </Box>
       }
