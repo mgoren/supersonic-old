@@ -2,21 +2,25 @@
 
 # Configuration
 
-`firebase functions:config:set sendgrid.api_key="SENDGRID_API_KEY"`
-
-Set **FROM** and **SUBJECT** in `index.js`
+- `firebase functions:config:set sendgrid.api_key="SENDGRID_API_KEY"`
+- Set **FROM** and **SUBJECT** in `index.js`
 
 Everything else should work as-is. This assumes that orders are saved to /orders in Firebase, and that order.receipt contains the HTML you want to send.
+
+# Testing
+
+```
+firebase functions:config:get > .runtimeconfig.json // file must be in functions dir
+firebase emulators:start --only functions
+```
 
 # Deployment
 
 `firebase deploy --only functions`
 
-(Answer no when asked if you want to erase other cloud functions.)
-
 ## Functions Code
 
-See file [functions/index.js](functions/index.js) for the email sending code.
+See file [functions/email-confirmation.js](functions/email-confirmation.js) for the email sending code.
 
 Sending emails is performed using [nodemailer](https://www.npmjs.com/package/nodemailer) a node based Email client with comprehensive EMail server setup. For simplicity, in this sample we're showing how to send email through SMTP using a Gmail account. Be aware that Gmail has an [email sending quota](https://support.google.com/mail/answer/22839). If you are planning on sending a large number of emails you should use a professional email sending platform such as [Sendgrid](https://console.cloud.google.com/launcher/details/sendgrid-app/sendgrid-email), [Mailjet](https://www.mailjet.com/google) or [Mailgun](http://www.mailgun.com/google).
 

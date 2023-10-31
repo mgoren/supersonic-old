@@ -5,10 +5,8 @@ exports.cancelStripePaymentIntent = cancelStripePaymentIntent;
 const { appendrecordtospreadsheet } = require('./google-sheet-sync');
 exports.appendrecordtospreadsheet = appendrecordtospreadsheet;
 
-// const { sendEmailConfirmation } = require('./email-confirmation');
-// exports.sendEmailConfirmation = sendEmailConfirmation;
-
-
+const { sendEmailConfirmation } = require('./email-confirmation');
+exports.sendEmailConfirmation = sendEmailConfirmation;
 
 /**
  * Import function triggers from their respective submodules:
