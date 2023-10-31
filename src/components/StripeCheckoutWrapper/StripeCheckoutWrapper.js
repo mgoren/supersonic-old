@@ -4,6 +4,7 @@ import {loadStripe} from '@stripe/stripe-js';
 import Loading from 'components/Loading';
 import { Box } from '@mui/material';
 import StripeCheckoutForm from 'components/StripeCheckoutForm';
+import { SANDBOX_MODE } from 'config';
 
 // ***************************************************************
 const firebaseFunctionsBaseUrlProduction = "https://us-central1-supersonic-fc15a.cloudfunctions.net";
@@ -77,6 +78,12 @@ export default function StripeCheckoutWrapper({ total, name, email, processing, 
   
   return (
     <>
+      {SANDBOX_MODE &&
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '3rem', my: 2, backgroundColor: 'pink' }}>
+          Testing: 4242424242424242 / any future expiration / any cvc / any zip
+        </Box>
+      }
+
       {clientSecret ?
         <Elements stripe={stripePromise} options={options} key={clientSecret}>
           <StripeCheckoutForm

@@ -9,7 +9,8 @@ import IntroHeader from 'components/Header/IntroHeader';
 import OrderSummary from "components/OrderSummary";
 import Receipt from "components/Receipt";
 import { cache, cached } from 'utils';
-import { PAYMENT_METHODS, PAYPAL_OPTIONS, ORDER_DEFAULTS, TITLE, CONFIRMATION_CHECK_TITLE, CONFIRMATION_PAYPAL_TITLE } from "config";
+import { PAYMENT_METHODS, PAYPAL_OPTIONS, ORDER_DEFAULTS, TITLE, CONFIRMATION_CHECK_TITLE, CONFIRMATION_PAYPAL_TITLE, SANDBOX_MODE } from "config";
+import { Box } from "@mui/material";
 // import { PageTitle, Paragraph, StyledPaper, StyledLink } from 'components/Layout/SharedStyles';
 
 export default function Registration() {
@@ -63,6 +64,12 @@ const RealRegistration = () => {
 
   const content = (
     <>
+      {SANDBOX_MODE &&
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '3rem', backgroundColor: 'pink' }}>
+          TEST MODE ONLY - DO NOT USE FOR REAL REGISTRATION
+        </Box>
+      }
+
       {error && <Error error={error} />}
 
       <Header
