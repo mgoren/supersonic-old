@@ -17,8 +17,10 @@ export default function Seattle() {
         Lake City Contra Dance
       </Header>
 
-      <Paragraph> Come dancing the Thursday evening before Supersonic!</Paragraph>
-      <Paragraph>Directions to the Lake City contra dance can be found <StyledLink to={process.env.PUBLIC_URL + '/supersonic/LakeCityContraMap.pdf'}>here</StyledLink>.</Paragraph>
+      <Paragraph>
+        Come dancing the <StyledLink to='https://seattledance.org/contra/lakecity/'>Thursday evening</StyledLink> before Supersonic! <br />
+        Directions to the Lake City contra dance can be found <StyledLink to={process.env.PUBLIC_URL + '/supersonic/LakeCityContraMap.pdf'}>here</StyledLink>.
+      </Paragraph>
 
       <Header>
         Dining

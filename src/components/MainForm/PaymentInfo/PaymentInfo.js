@@ -21,10 +21,10 @@ export default function PaymentInfo({ donate, setDonate, clampValue, admissionQu
         <StyledPaper className='admissions-cost'>
             {ADMISSION_COST_RANGE[0] < ADMISSION_COST_RANGE[1] ?
               <>
-              <Title>Sliding scale</Title>
+                <Title>Sliding scale</Title>
                 <RightAlignedInput
-                  sx={{ maxWidth: '5rem' }}
-                  label={`How much are you able to pay per person? ($${ADMISSION_COST_RANGE[0]}-${ADMISSION_COST_RANGE[1]})`}
+                  sx={{ width: '5em' }}
+                  label={`How much are you able to pay${admissionQuantity > 1 ? ' *per person*' : ''}? ($${ADMISSION_COST_RANGE[0]}-${ADMISSION_COST_RANGE[1]})`}
                   name="admissionCost"
                   pattern='###'
                   range={ADMISSION_COST_RANGE}

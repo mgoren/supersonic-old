@@ -18,7 +18,7 @@ export default function PaymentExplanation() {
       <Title sx={{mt: 4}}>Work-Trade</Title>
       <Typography>A limited number of work-trade opportunities exist for $80 or full registration. Note that these positions will require missing dance time, time off on Friday, or advance work. For details, please contact Karen at <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.</Typography>
 
-      <Title sx={{mt: 4}}>Scale</Title>
+      <Title sx={{mt: 4}}>Scale (per person)</Title>
       <Typography>$120 minimum &mdash; if you cannot afford this, consider applying for work-trade.</Typography>
       <Typography>$180 break-even &mdash; this is the amount needed per attendee to cover costs.</Typography>
       <Typography>$240 &mdash; allow one dancer to attend at the low end of the scale.</Typography>
