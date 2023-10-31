@@ -1,12 +1,7 @@
-const { createStripePaymentIntent, cancelStripePaymentIntent } = require('./stripe');
-exports.createStripePaymentIntent = createStripePaymentIntent;
-exports.cancelStripePaymentIntent = cancelStripePaymentIntent;
-
-const { appendrecordtospreadsheet } = require('./google-sheet-sync');
-exports.appendrecordtospreadsheet = appendrecordtospreadsheet;
-
-const { sendEmailConfirmation } = require('./email-confirmation');
-exports.sendEmailConfirmation = sendEmailConfirmation;
+exports.createStripePaymentIntent = require('./stripe').createStripePaymentIntent;
+exports.cancelStripePaymentIntent = require('./stripe').cancelStripePaymentIntent;
+exports.appendrecordtospreadsheet = require('./google-sheet-sync').appendrecordtospreadsheet;
+exports.sendEmailConfirmation = require('./email-confirmation').sendEmailConfirmation;
 
 /**
  * Import function triggers from their respective submodules:
