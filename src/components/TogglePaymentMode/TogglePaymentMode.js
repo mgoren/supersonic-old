@@ -4,9 +4,12 @@ import { PAYMENT_METHODS } from 'config';
 const switchToCheckText = '(or pay by check)';
 const switchToPaypalText = '(or view electronic payment options)';
 
-export default function TogglePaymentMode({ paymentMethod, setPaymentMethod }) {
+export default function TogglePaymentMode({ paymentMethod, setPaymentMethod, setError }) {
   const text = paymentMethod === 'check' ? switchToPaypalText : switchToCheckText;
-  const togglePaymentMethod = () => setPaymentMethod(paymentMethod === 'check' ? PAYMENT_METHODS[0] : 'check');
+  const togglePaymentMethod = () => {
+    setError(null);
+    setPaymentMethod(paymentMethod === 'check' ? PAYMENT_METHODS[0] : 'check');
+  };
 
   return (
     <>

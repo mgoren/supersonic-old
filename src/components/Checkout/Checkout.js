@@ -122,7 +122,7 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
         }
 
         {!paying && !processing && (paymentMethod === 'check' || paymentMethod === 'stripe' || paypalButtonsLoaded) &&
-          <TogglePaymentMode paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} />
+          <TogglePaymentMode paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} setError={setError} />
         }
       </StyledPaper>
 
