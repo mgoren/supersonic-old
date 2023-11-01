@@ -75,6 +75,15 @@ export function SharedReceipt() {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
+        Supersonic will follow masking policies of the Seattle Emerald City and Lake City contra dances.<br />
+        Vaccination encouraged but not required. We may require Covid testing before and/or during the weekend.
+      </Typography>
+
+      <Typography component='p' sx={{ mt: 2 }}>
+        Please respect other dancers by using fragrance-free toiletries.
+      </Typography>
+
+      <Typography component='p' sx={{ mt: 2 }}>
         If you are able to volunteer, please contact <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.
       </Typography>
 

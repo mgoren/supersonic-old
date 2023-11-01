@@ -22,7 +22,8 @@ export default function PaymentExplanation() {
       <Typography>$120 minimum &mdash; if you cannot afford this, consider applying for work-trade.</Typography>
       <Typography>$180 break-even &mdash; this is the amount needed per attendee to cover costs.</Typography>
       <Typography>$240 &mdash; allow one dancer to attend at the low end of the scale.</Typography>
-      <Typography>$280 &mdash; allow one dancer to attend work-trade.</Typography>
+
+      <Typography sx={{mt: 2}}>If your financial situation allows you to contribute above $240, it will help make the camp sustainable and support work-trade positions.</Typography>
     </StyledPaper>
   );
 }

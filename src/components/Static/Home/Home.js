@@ -20,11 +20,6 @@ export default function Home() {
         
       </Typography>
 
-      <Paragraph sx={{ mb: 2 }}>
-        Supersonic will follow Covid & mask policies of the<br />
-        Seattle Emerald City and Lake City contra dances.
-      </Paragraph>
-
       <Paragraph>
         Music by <StyledLink internal={true} to="/staff#band1">Notorious</StyledLink> and <StyledLink internal={true} to="/staff#band2">Playing with Fyre</StyledLink>
       </Paragraph>
@@ -35,11 +30,18 @@ export default function Home() {
       </Paragraph>
 
       <Paragraph>
-        Sound engineer <StyledLink internal={true} to="/staff#sound">Someone Awesome</StyledLink>
+        Registration: $120-240 sliding scale ($180 break-even)
+      </Paragraph>
+
+      <Paragraph sx={{ mb: 2 }}>
+        Supersonic will follow masking policies of the<br />
+        Seattle Emerald City and Lake City contra dances.<br />
+        Vaccination encouraged but not required.<br />
+        We may require Covid testing before and/or during the weekend.
       </Paragraph>
 
       <Paragraph>
-        Registration: $120-280 sliding scale ($180 break-even)
+        Please respect other dancers by using fragrance-free toiletries.
       </Paragraph>
 
       <SectionDivider/>
