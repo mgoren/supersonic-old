@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { EMAIL_CONTACT } from 'config';
-import { mailtoLink, scrollToTop } from 'utils';
+import { EMAIL_CONTACT, COVID_POLICY_URL } from 'config';
+import { mailtoLink, websiteLink, scrollToTop } from 'utils';
 import OrderSummary from 'components/OrderSummary';
 import { StyledLink } from 'components/Layout/SharedStyles';
 import { Divider, Typography } from '@mui/material';
@@ -75,10 +75,10 @@ export function SharedReceipt() {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
-        Supersonic Contra Dance Weekend will follow the mask guidelines of the weekly Seattle contra dances.<br />
+        Supersonic will follow the mask guidelines of the weekly Seattle contra dances.<br />
         As of November 1, well-fitting face masks are required.<br />
         Please do not attend if you are feeling unwell.<br />
-        See <StyledLink to='/about#covid'>here</StyledLink> for the full Covid and refund policies.
+        See <StyledLink to={websiteLink(COVID_POLICY_URL)}>here</StyledLink> for the full Covid and refund policies.
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
