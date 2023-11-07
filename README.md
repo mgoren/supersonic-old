@@ -2,7 +2,7 @@
 
 **Stripe configuration**
 - On Stripe console, disable all payment methods except Cards, Apple Pay, Google Pay
-- Use test keys until ready to launch
+- Use test api keys until ready to launch
 
 **Also see README files inside the functions folder!**
 
