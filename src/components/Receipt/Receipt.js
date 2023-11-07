@@ -63,7 +63,7 @@ export function AdditionalPersonReceipt({ order }) {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
-        We're excited to have you attend this year's Supersonic. 
+        We're excited to welcome you to the 2024 Supersonic Contra Dance Weekend. 
       </Typography>
 
       <SharedReceipt />
@@ -75,14 +75,18 @@ export function SharedReceipt() {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
-        Supersonic will follow masking policies of the Seattle Emerald City and Lake City contra dances.<br />
-        As of November, this means well-fitted masks are required.<br />
-        Vaccination encouraged but not required.<br />
-        Please do not attend if you are feeling sick.
+        Supersonic Contra Dance Weekend will follow the mask guidelines of the weekly Seattle contra dances.<br />
+        As of November 1, well-fitting face masks are required.<br />
+        Please do not attend if you are feeling unwell.<br />
+        See <StyledLink to='/about#covid'>here</StyledLink> for the full Covid and refund policies.
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
         Please respect other dancers by using fragrance-free toiletries.
+      </Typography>
+
+      <Typography component='p' sx={{ mt: 2 }}>
+        If you offered or requested housing, you will receive an email from Kristin, our housing coordinator.
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>

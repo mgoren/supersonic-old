@@ -1,5 +1,7 @@
 import { Box, List, ListItem } from '@mui/material';
 import { StyledLink, StyledPaper, PageTitle, Paragraph, Header } from 'components/Layout/SharedStyles';
+import { mailtoLink } from 'utils';
+import { EMAIL_CONTACT } from 'config';
 
 export default function About() {
 
@@ -27,14 +29,27 @@ export default function About() {
         <ListItem>Ensure our clothes and selves are 100% fragrance-free when attending Supersonic.</ListItem>
       </List>
 
-      <Header>
-        Covid Policy
+      <Header id='covid'>
+        Covid Policy for attendees
       </Header>
       <Paragraph sx={{ mb: 2 }}>
-        Supersonic will follow masking policies of the  Seattle Emerald City and Lake City contra dances. 
-        As of November, this means well-fitted masks are required. 
-        Vaccination encouraged but not required. 
-        Please do not attend if you are feeling sick.
+        Supersonic Contra Dance Weekend will follow the mask guidelines of the weekly Seattle contra dances.
+        As of November 1, well-fitting face masks are required. 
+        Masks will be provided for those who don't have one. 
+        No proof of vaccination or testing will be required.
+        Any updates to this policy will be announced in email and on the website.
+        If you feel unwell, please do not attend. 
+        If you feel unwell during the weekend, please notify the organizers immediately, leave the dance as soon as possible, and then send a follow-up email within 24 hours if you wish to receive a refund. 
+        Full refunds will be given minus any transaction fees incurred. 
+      </Paragraph>
+
+      <Header id='refund'>
+        Refund Policy
+      </Header>
+      <Paragraph>
+        Registration is not transferable. 
+        Please contact <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink> if you need to cancel. 
+        Cancellations will be issued in full minus any bank/Stripe transaction fees incurred. Refunds may take up to 7 days to process.
       </Paragraph>
 
       <Header>

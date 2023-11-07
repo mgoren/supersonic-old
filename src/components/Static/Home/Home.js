@@ -34,11 +34,10 @@ export default function Home() {
       </Paragraph>
 
       <Paragraph sx={{ mb: 2 }}>
-        Supersonic will follow masking policies of the<br />
-        Seattle Emerald City and Lake City contra dances.<br />
-        As of November, this means well-fitted masks are required.<br />
-        Vaccination encouraged but not required.<br />
-        Please do not attend if you are feeling sick.
+        Supersonic will follow mask guidelines of the weekly Seattle contras.<br />
+        As of November 1, well-fitting face masks are required.<br />
+        Please do not attend if you are feeling unwell.<br />
+        See <StyledLink internal={true} to='/about#covid'>here</StyledLink> for the full Covid policy.<br />
       </Paragraph>
 
       <Paragraph>
