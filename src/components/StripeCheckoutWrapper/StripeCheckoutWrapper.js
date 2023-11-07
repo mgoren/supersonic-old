@@ -19,7 +19,7 @@ export default function StripeCheckoutWrapper({ total, name, email, processing, 
   const clientSecretRef = useRef(null);
 
   const createPaymentIntent = useCallback(async () => {
-    console.log('creating payment intent for', name, email);
+    // console.log('creating payment intent for', name, email);
     try {
       const response = await fetch(`${firebaseFunctionsBaseUrl}/createStripePaymentIntent`, {
         method: 'POST',
@@ -61,7 +61,7 @@ export default function StripeCheckoutWrapper({ total, name, email, processing, 
   useEffect(() => {
     createPaymentIntent();
     return () => {
-      console.log('leaving Stripe checkout page');
+      // console.log('leaving Stripe checkout page');
       if (clientSecretRef.current) {
         cancelPaymentIntent();
       }

@@ -53,7 +53,7 @@ export const removeExtraPeople = (order) => {
 
 // helpers for scrolling to first invalid field
 export const getFirstInvalidFieldName = (errors) => {
-  console.log('errors', errors);
+  // console.log('errors', errors);
   // this relies on formik only generating errors on the people and emailConfirmation fields
   if (errors.emailConfirmation && emailConfirmationIsFirstInvalidField(errors)) {
     return 'emailConfirmation';

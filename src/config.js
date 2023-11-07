@@ -106,7 +106,8 @@ export const FIELD_CONFIG = {
     validation: PHONE_VALIDATION.required('Please enter phone number.'),
     defaultValue: '',
     order: 7,
-    width: 12,
+    // width: 12,
+    width: 4,
     autoComplete: 'tel'
   },
   address: {
@@ -130,7 +131,8 @@ export const FIELD_CONFIG = {
     validation: Yup.string().required('Please enter city.'),
     defaultValue: '',
     order: 10,
-    width: 6,
+    // width: 6,
+    width: 5,
     autoComplete: 'city'
   },
   state: {
@@ -164,8 +166,10 @@ export const FIELD_CONFIG = {
 // below is config for this particular registration instance
 
 // order of FIRST_PERSON_FIELDS is used in emailConfirmationIsFirstInvalidField
-const FIRST_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'emailConfirmation', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
-const OTHER_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
+const FIRST_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'emailConfirmation', 'phone', 'city', 'state'];
+const OTHER_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'phone', 'city', 'state'];
+// const FIRST_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'emailConfirmation', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
+// const OTHER_PERSON_FIELDS = ['first', 'last', 'nametag', 'pronouns', 'email', 'phone', 'address', 'apartment', 'city', 'state', 'zip', 'country'];
 
 export const PERSON_INPUTS = [
   { label: 'Your contact information', fields: FIRST_PERSON_FIELDS },

@@ -19,7 +19,7 @@ const client = new google.auth.JWT(
 // trigger function to write to Sheet when new data comes in on CONFIG_DATA_PATH
 exports.appendrecordtospreadsheet = functions.database.ref(`${CONFIG_DATA_PATH}/{ITEM}`).onCreate(
   (snap) => {
-    console.log('in appendrecordtospreadsheet');
+    // console.log('in appendrecordtospreadsheet');
     const newRecord = snap.val();
     const createdAt = new Date(newRecord.timestamp).toLocaleDateString();
     const orders = splitOrder(newRecord);
@@ -67,7 +67,7 @@ exports.appendrecordtospreadsheet = functions.database.ref(`${CONFIG_DATA_PATH}/
 
 // accepts an append request, returns a Promise to append it, enriching it with auth
 function appendPromise(requestWithoutAuth) {
-  console.log('in appendPromise');
+  // console.log('in appendPromise');
   return new Promise(async (resolve, reject) => {
     try {
       await client.authorize();

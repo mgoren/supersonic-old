@@ -12,7 +12,7 @@ export default function StripeCheckoutForm({ setError, processing, setProcessing
   useEffect(() => {
     if (stripe && elements) {
       setReady(true);
-      console.log('ready');
+      // console.log('ready');
     }
   }, [stripe, elements]);
 
@@ -35,15 +35,15 @@ export default function StripeCheckoutForm({ setError, processing, setProcessing
 
     if (result.error) {
       // Show error to your customer (for example, payment details incomplete)
-      console.log(result.error.message);
+      // console.log(result.error.message);
       setProcessing(false);
       setError(`Stripe encountered an error: ${result.error.message}. Please try again or contact ${EMAIL_CONTACT}.`);
     } else if (result.paymentIntent.status === 'succeeded') {
-      console.log('success', result);
+      // console.log('success', result);
       clientSecretRef.current = null;
       saveOrderToFirebase(result);
     } else {
-      console.log('unexpected Stripe status', result);
+      // console.log('unexpected Stripe status', result);
       setProcessing(false);
       setError(`Stripe encountered an unexpected error: ${result.error.message}. Please contact ${EMAIL_CONTACT}.`);
       // will also likely redirect to return_url, which is just an error page in this case
