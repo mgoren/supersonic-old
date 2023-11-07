@@ -1,12 +1,15 @@
 import { EMAIL_CONTACT } from "config";
 import { mailtoLink } from "utils";
 import { StyledLink, StyledPaper, Title } from 'components/Layout/SharedStyles';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 export default function PaymentExplanation() {
   return (
     <StyledPaper>
       <Title>Where does my money go?</Title>
+      <Box sx={{ mb: 2 }}>
+        <img src={process.env.PUBLIC_URL + '/supersonic/piechart.png'} alt="" style={{ maxWidth: '100%' }} />
+      </Box>
       <Typography><strong>Talent & Staff (stipend/travel/accomodations):</strong> 60% of the budget &mdash; we believe in compensating our people at the higher end of the going rate.</Typography>
       <Typography><strong>Hall Rental/Equipment:</strong> 25% of the budget</Typography>
       <Typography><strong>Snacks/Supplies:</strong> 10% of the budget</Typography>

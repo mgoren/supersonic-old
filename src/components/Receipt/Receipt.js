@@ -24,11 +24,11 @@ function CheckReceipt({ order }) {
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
-        Make your check out to Karen Marshall, write your name in the memo area, and mail to:
+        Make your check out to Supersonic Contra Dance Weekend, write your name in the memo area, and mail to:
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
-        Karen Marshall<br />
+        Supersonic Contra Dance Weekend<br />
         PO Box 1173<br />
         Anacortes, WA 98221
       </Typography>

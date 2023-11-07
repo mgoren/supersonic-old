@@ -27,7 +27,6 @@ export default function About() {
         <ListItem>Ensure our clothes and selves are 100% fragrance-free when attending Supersonic.</ListItem>
       </List>
 
-
       <Header>
         Covid Policy
       </Header>
@@ -49,7 +48,7 @@ export default function About() {
       </Header>
       <Paragraph>This dance weekend is in Seattle. We will do our best to find housing for out-of-town guests. Please remember that we are all volunteers, so adjust expectations accordingly. If you have attended other dance weekends in Seattle, you are strongly encouraged to make your own arrangements with friends you have stayed with before.</Paragraph>
       <Paragraph>Do you need housing or can you offer housing to visiting dancers? Please be sure to include this as a part of your Supersonic registration.</Paragraph>
-      <Paragraph>If you have any other questions about housing or hosting guests, please email: housing@supersoniccontra.com</Paragraph>
+      <Paragraph>If you have any other questions about housing or hosting guests, please email Kristin at housing@supersoniccontra.com</Paragraph>
     </StyledPaper>
   );
 }
