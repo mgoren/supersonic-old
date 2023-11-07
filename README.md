@@ -23,7 +23,7 @@
 Set environment variables in `.env`
 
 **Production (with GitHub workflow and Firebase hosting):**
-Set environment variables as [secrets](https://github.com/mgoren/registration/settings/secrets/actions) on the repo and update `.github/workflows/firebase-hosting-merge.yml`.
+Set environment variables as [secrets](https://github.com/mgoren/supersonic/settings/secrets/actions) on the repo and update `.github/workflows/firebase-hosting-merge.yml`.
 
 # Deployment
 
