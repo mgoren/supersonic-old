@@ -50,7 +50,7 @@ export default function Staff() {
           <img src={process.env.PUBLIC_URL + '/supersonic/notorious.jpeg'} alt="Notorious"  style={{ width: 300 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
-          More info coming soon...
+          Lauded as "sparkling" and "exhilarating” Notorious Folk musicians Eden MacAdam-Somer, Larry Unger, Sam Bartlett, Mark "Pokey" Hellenberg, and Mark Murphy present a thrilling musical experience in genres that span many continents, lighting up the dance hall with rhythm and sonority. Notorious has been a featured ensemble in various configurations at dance weekends, festivals, and concert halls spanning the contiguous US, Alaska, Hawaii, Europe, India, and Afghanistan. We are psyched to be back in the dance hall together, playing for you!!!
         </Paragraph>
       </Box>
       <Box sx={{ clear: 'both' }} />

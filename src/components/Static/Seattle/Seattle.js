@@ -25,7 +25,10 @@ export default function Seattle() {
       <Header>
         Dining
       </Header>
-      <Paragraph>Click <StyledLink to={process.env.PUBLIC_URL + '/supersonic/Supersonic-Dining-Guide-2020.pdf'}>here</StyledLink> to view our dining guide (last updated 2020).</Paragraph>
+      <Paragraph>
+        Click <StyledLink to={process.env.PUBLIC_URL + '/supersonic/Supersonic-Dining-Guide-2020.pdf'}>here</StyledLink> to view our dining guide (last updated 2020).<br />
+        The new 2023 Ballard dining guide is coming soon.
+      </Paragraph>
 
       <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "column" }, justifyContent: "space-between", mb: 2 }}>
         <Box>
@@ -33,7 +36,6 @@ export default function Seattle() {
             Around Seattle
           </Header>
           <List>
-            <ListItem><StyledLink to="https://www.theochocolate.com/factory-tours/">Take a chocolate factory tour at Theo Chocolate</StyledLink></ListItem>	
             <ListItem><StyledLink to="https://fremont.com/explore/sights/">Visit the offbeat art in the Fremont neighborhood and say 'hello' to the Fremont Troll</StyledLink></ListItem>	
             <ListItem><StyledLink to="http://fryemuseum.org">Visit The Frye Art Museum (free)</StyledLink></ListItem>	
             <ListItem><StyledLink to="http://mohai.org">Learn about Seattle history with MOHAI</StyledLink></ListItem>	
@@ -45,7 +47,6 @@ export default function Seattle() {
             <ListItem><StyledLink to="https://www.elliottbaybook.com/">Find new reading material at The Elliott Bay Book Company</StyledLink></ListItem>	
             <ListItem><StyledLink to="http://www.wingluke.org"> Visit Seattle's Chinatown, especially The Wing</StyledLink></ListItem>	
             <ListItem><StyledLink to="https://seattleboulderingproject.com">Go bouldering with the Seattle Bouldering Project</StyledLink></ListItem>	
-            <ListItem><StyledLink to="http://www.livingcomputers.org">Geek out at the Living Computer Museum</StyledLink></ListItem>
           </List>
         </Box>
 
@@ -56,7 +57,6 @@ export default function Seattle() {
           <List>
             <ListItem><StyledLink to="http://ballardlocks.org" target="_blank" rel="noreferrer">Visit the Ballard Locks</StyledLink></ListItem>
             <ListItem><StyledLink to="http://www.seattle.gov/parks/find/parks/golden-gardens-park" target="_blank" rel="noreferrer">Take a walk at the Golden Gardens Park.</StyledLink></ListItem>
-            <ListItem><StyledLink to="http://www.fulltilticecream.com">Play pinball while eating ice cream at Full Tilt</StyledLink></ListItem>
             <ListItem><StyledLink to="http://www.sfmamarkets.com/visit-ballard-farmers-market">And, if you can tear yourself away from dancing, the Ballard Farmers Market is year-round</StyledLink></ListItem>
           </List>
         </Box>

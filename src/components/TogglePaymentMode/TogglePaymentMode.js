@@ -1,7 +1,7 @@
 import { Typography, Button } from '@mui/material';
 import { PAYMENT_METHODS } from 'config';
 
-const switchToCheckText = '(or pay by check)';
+const switchToCheckText = '(or pay by check if unable to pay electronically)';
 const switchToPaypalText = '(or view electronic payment options)';
 
 export default function TogglePaymentMode({ paymentMethod, setPaymentMethod, setError }) {

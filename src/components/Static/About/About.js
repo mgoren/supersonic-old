@@ -27,6 +27,17 @@ export default function About() {
         <ListItem>Ensure our clothes and selves are 100% fragrance-free when attending Supersonic.</ListItem>
       </List>
 
+
+      <Header>
+        Covid Policy
+      </Header>
+      <Paragraph sx={{ mb: 2 }}>
+        Supersonic will follow masking policies of the  Seattle Emerald City and Lake City contra dances. 
+        As of November, this means well-fitted masks are required. 
+        Vaccination encouraged but not required. 
+        Please do not attend if you are feeling sick.
+      </Paragraph>
+
       <Header>
         Food and Water
       </Header>

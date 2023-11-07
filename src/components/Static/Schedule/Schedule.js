@@ -14,13 +14,14 @@ export default function Schedule() {
       </Box>
 
       <Header>
-        <em>2023 itinerary coming soon</em>
+        <em>2024 itinerary coming soon</em>
       </Header>
 
       <Header>
         Past Flights
       </Header>
       <List>
+        <ListItem>2023 &mdash; No dance weekend</ListItem>
         <ListItem>2022 &mdash; No dance weekend</ListItem>
         <ListItem>2021 &mdash; No dance weekend</ListItem>
         <ListItem>2020 &mdash; Elixir and the Syncopaths with Nils Fredland and Seth Tepfer</ListItem>

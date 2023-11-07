@@ -26,7 +26,7 @@ export const PAYPAL_ME_URL = 'paypal.me/PortlandBall';
 
 export const ADMISSION_COST_RANGE = [120, 280];
 export const ADMISSION_COST_DEFAULT = 180;
-export const ADMISSION_QUANTITY_RANGE = [1, 2];
+export const ADMISSION_QUANTITY_RANGE = [1, 4];
 export const DONATION_OPTION = true;
 export const DONATION_RANGE = [0, 999];
 
