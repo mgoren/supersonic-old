@@ -61,7 +61,7 @@ export default function Staff() {
           <img src={process.env.PUBLIC_URL + '/supersonic/playing-with-fyre.png'} alt="Playing with Fyre"  style={{ width: 300 }} />
         </Box>
         <Paragraph sx={{ pt: 1, mb: 0 }}>
-          More info coming soon...
+          Playing With Fyre is a very unique, dynamic contra dance band that plays within the unparalleled passion of the moment. They bring a unique blend of trad, jazz, old time, funk, and blues and will take you on an emotionally driven dance journey!  Love the music, Live the moment,  Dance from your heart! George Paul on Keys, Rob Zisette on Fiddle, Dave Bartley on Stringed Instruments.
         </Paragraph>
       </Box>
       <Box sx={{ clear: 'both' }} />

@@ -1,5 +1,5 @@
 // ***************************************************************
-const frontendSiteDomain = "https://registration.pdxcontra.org";
+const frontendSiteDomain = "https://supersoniccontra.com";
 // ***************************************************************
 
 const functions = require("firebase-functions");
