@@ -16,7 +16,7 @@
 'use strict';
 
 // TODO: Set these
-const FROM = '"Supersonic" <contra@portlandcountrydance.org>'; // CHANGE THIS EMAIL!
+const FROM = '"Supersonic" <info@supersoniccontra.com>'; // CHANGE THIS EMAIL!
 const SUBJECT = 'Supersonic 2024 Registration';
 
 // Firebase database path
