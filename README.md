@@ -4,7 +4,7 @@
 - On Stripe console, disable all payment methods except Cards, Apple Pay, Google Pay
 - Use test api keys until ready to launch
 
-**Also see README files inside the functions folder!**
+**Also see the README files inside the functions folder!**
 
 **Setup Firebase:**
 - Create firebase project and add to app, including firebase hosting
