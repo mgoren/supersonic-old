@@ -2,7 +2,7 @@
 
 import * as Yup from 'yup';
 
-export const SANDBOX_MODE = true; // for testing only
+export const SANDBOX_MODE = false; // for testing only
 
 export const NUM_PAGES = 3;
 export const STEPS = [
