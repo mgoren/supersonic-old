@@ -39,7 +39,7 @@ exports.appendrecordtospreadsheet = functions.database.ref(`${CONFIG_DATA_PATH}/
         zip,
         country,
         volunteer: volunteer?.join(', '),
-        hospitality: hospitality.length === 4 ? 'all' : hospitality?.join(', '),
+        hospitality: hospitality?.join(', '),
         scholarship: scholarship?.join(', '),
         share: share?.join(', '),
         comments,
