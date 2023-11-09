@@ -15,7 +15,7 @@ export default function ContactInfo({ admissionQuantity, clampValue }) {
         <RightAlignedInput
           type='radio'
           name='admissionQuantity'
-          label={'Select admissions quantity'}
+          label={'How many people are you registering?'}
           options={Array(ADMISSION_QUANTITY_RANGE[1])
             .fill()
             .map((_, index) => ({ label: index + 1, value: index + 1 }))
