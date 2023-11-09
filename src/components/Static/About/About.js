@@ -43,6 +43,13 @@ export default function About() {
         Full refunds will be given minus any transaction fees incurred. 
       </Paragraph>
 
+      <Header id='waiver'>
+        Waiver
+      </Header>
+      <Paragraph>
+        You will need to sign a <StyledLink to={process.env.PUBLIC_URL + '/supersonic/supersonic-waiver.pdf'}>waiver</StyledLink> and email it to <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.<br />
+      </Paragraph>
+
       <Header id='refund'>
         Refund Policy
       </Header>

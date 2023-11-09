@@ -1,5 +1,7 @@
 import { Typography, Box, } from '@mui/material';
 import { StyledLink, StyledPaper, PageTitle, SectionDivider, Paragraph } from 'components/Layout/SharedStyles';
+import { mailtoLink} from 'utils';
+import { EMAIL_CONTACT } from 'config';
 
 export default function Home() {
 
@@ -17,7 +19,6 @@ export default function Home() {
 
       <Typography variant="h6" sx={{ mb: 2 }}>
         We are a zesty, high-energy dance weekend for experienced dancers.<br />
-        
       </Typography>
 
       <Paragraph>
@@ -41,7 +42,11 @@ export default function Home() {
       </Paragraph>
 
       <Paragraph>
-        Please respect other dancers by using fragrance-free toiletries.
+        You will need to sign a <StyledLink to={process.env.PUBLIC_URL + '/supersonic/supersonic-waiver.pdf'}>waiver</StyledLink> and email it to <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.<br />
+      </Paragraph>
+
+      <Paragraph>
+        Supersonic is a fragrance-free event. Please use only fragrance-free products.
       </Paragraph>
 
       <SectionDivider/>

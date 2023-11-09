@@ -75,6 +75,10 @@ export function SharedReceipt() {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
+        Please sign <StyledLink to='https://supersoniccontra.com/supersonic/supersonic-waiver.pdf'>this waiver</StyledLink> and email it to <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.<br />
+      </Typography>
+
+      <Typography component='p' sx={{ mt: 2 }}>
         Supersonic will follow the mask guidelines of the weekly Seattle contra dances.<br />
         As of November 1, well-fitting face masks are required.<br />
         Please do not attend if you are feeling unwell.<br />

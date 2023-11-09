@@ -1,5 +1,5 @@
 import { Box, List, ListItem } from '@mui/material';
-import { StyledPaper, PageTitle, Header } from 'components/Layout/SharedStyles';
+import { StyledPaper, StyledLink, PageTitle, Header } from 'components/Layout/SharedStyles';
 
 export default function Schedule() {
 
@@ -14,8 +14,11 @@ export default function Schedule() {
       </Box>
 
       <Header>
-        <em>2024 itinerary coming soon</em>
+        Supersonic Contra Dance Wekeend Itinerary
       </Header>
+      <List>
+        <ListItem>2024 &mdash; <StyledLink to={process.env.PUBLIC_URL + '/supersonic/supersonic-schedule-2024.pdf'}>Supersonic Contra Dance Weekend Schedule</StyledLink></ListItem>
+      </List>
 
       <Header>
         Past Flights
