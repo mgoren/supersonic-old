@@ -10,6 +10,7 @@ import MaterialLayout from 'components/Layout/';
 import Error from 'components/Error';
 import { EMAIL_CONTACT } from 'config';
 import PaymentExplanation from 'components/PaymentExplanation';
+import ScrollToAnchor from 'components/ScrollToAnchor';
 // import * as S from './Global-styles';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
     <>
       {/* <S.GlobalStyle /> */}
       <Router>
+        <ScrollToAnchor />
         <MaterialLayout>
           <Routes>
             <Route exact path="/" element=<Home /> />
