@@ -86,7 +86,7 @@ export function SharedReceipt() {
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
-        Please respect other dancers by using fragrance-free toiletries.
+        Supersonic is a fragrance-free event. Please use only fragrance-free products.
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
