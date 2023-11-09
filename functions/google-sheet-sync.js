@@ -24,11 +24,12 @@ exports.appendrecordtospreadsheet = functions.database.ref(`${CONFIG_DATA_PATH}/
     const createdAt = new Date(newRecord.timestamp).toLocaleDateString();
     const orders = splitOrder(newRecord);
     const promises = orders.map((order) => {
-      const { first, last, nametag, email, phone, address, apartment, city, state, zip, country, volunteer, hospitality, scholarship, share, comments, admissionQuantity, admissionCost, donation, total, deposit, owed, purchaser, electronicPaymentId } = order;
+      const { first, last, pronouns, nametag, email, phone, address, apartment, city, state, zip, country, volunteer, hospitality, scholarship, share, comments, admissionQuantity, admissionCost, donation, total, deposit, owed, purchaser, electronicPaymentId } = order;
       // fields must be in the same order as the columns in the spreadsheet!
       const fields = {
         first,
         last,
+        pronouns,
         nametag,
         email,
         phone,
@@ -93,8 +94,8 @@ function splitOrder(order) {
   const owed = total - deposit;
   const purchaser = fullName(order.people[0]);
   for (const person of order.people) {
-    const {first, last, nametag, email, phone, address, apartment, city, state, zip, country} = person;
-    const personFields = {first, last, nametag, email, phone, address, apartment, city, state, zip, country};
+    const {first, last, pronouns, nametag, email, phone, address, apartment, city, state, zip, country} = person;
+    const personFields = {first, last, pronouns, nametag, email, phone, address, apartment, city, state, zip, country};
     const firstPersonFields = { ...personFields, volunteer, hospitality, scholarship, share, comments, admissionQuantity, admissionCost, donation, total, deposit, owed, purchaser, electronicPaymentId };
     const otherPersonFields = { ...personFields, purchaser };
     orders.push(person.index === 0 ? firstPersonFields : otherPersonFields);
