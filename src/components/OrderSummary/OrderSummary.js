@@ -20,7 +20,7 @@ export default function OrderSummary({ order, currentPage }) {
             {person.phone}<br />
             {person.address && <>{displayAddress(person.address, person.apartment)}<br /></>}
             {person.city}, {person.state} {person.zip}<br />
-            {person.country && <>{person.country}</>}
+            {person.country !== 'USA' && <>{person.country}</>}
           </p>
         ))}
       </Box>

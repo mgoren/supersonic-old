@@ -75,7 +75,7 @@ export function SharedReceipt() {
   return (
     <>
       <Typography component='p' sx={{ mt: 2 }}>
-        Please sign <StyledLink to='https://supersoniccontra.com/supersonic/supersonic-waiver.pdf'>this waiver</StyledLink> and email it to <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.<br />
+        Please sign <StyledLink to='https://www.supersoniccontra.com/supersonic/supersonic-waiver.pdf'>this waiver</StyledLink> and email it to <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.<br />
       </Typography>
 
       <Typography component='p' sx={{ mt: 2 }}>
