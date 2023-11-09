@@ -18,7 +18,7 @@ export default function OrderSummary({ order, currentPage }) {
             Nametag: {person.nametag ? <>{person.nametag}</> : <>{person.first} {person.last}</>} {person.pronouns && <>({person.pronouns})</>}<br />
             {person.email}<br />
             {person.phone}<br />
-            {displayAddress(person.address, person.apartment)}<br />
+            {person.address && <>{displayAddress(person.address, person.apartment)}<br /></>}
             {person.city}, {person.state} {person.zip}<br />
             {person.country && <>{person.country}</>}
           </p>
