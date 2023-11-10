@@ -44,13 +44,12 @@ const TextInput = ({ label, name, type, hidden, ...props }) => {
 
   const handleBlurAndSetNametag = (e) => {
     handleBlur(e);  // bubble up to default Formik onBlur handler
-    if (name.includes('first') || name.includes('last')) {
+    if (name.includes('first')) {
       const personIndex = name.split('[')[1].split(']')[0];
       const first = getIn(values, `people[${personIndex}].first`);
-      const last = getIn(values, `people[${personIndex}].last`);
       const existingNametag = getIn(values, `people[${personIndex}].nametag`);
-      if (first && last && !existingNametag) {
-        setFieldValue(`people[${personIndex}].nametag`, `${first} ${last}`);
+      if (first && !existingNametag) {
+        setFieldValue(`people[${personIndex}].nametag`, first);
       }
     }
   };
