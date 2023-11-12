@@ -56,7 +56,7 @@ const RealRegistration = () => {
   const [order, setOrder] = useState(cached('order') || ORDER_DEFAULTS);
   const [currentPage, setCurrentPage] = useState(cached('currentPage') || 1);
   const [error, setError] = useState(null);
-  const CONFIRMATION_TITLE = order.paypalEmail === 'check' ? CONFIRMATION_CHECK_TITLE : CONFIRMATION_PAYPAL_TITLE;
+  const CONFIRMATION_TITLE = order.electronicPaymentId === 'check' ? CONFIRMATION_CHECK_TITLE : CONFIRMATION_PAYPAL_TITLE;
 
   // useEffect(() => { logBuildDate() }, []);
   useEffect(() => { cache('order', order) }, [order]);
