@@ -20,6 +20,7 @@ export default function Check({ saveOrderToFirebase, processing, setProcessing }
             Write your name in the memo area, and mail to:
           </Typography>
           <Typography sx={{ mt: 2 }}>
+            Karen Marshall<br />
             Supersonic Contra Dance Weekend<br />
             PO Box 1173<br />
             Anacortes, WA 98221
