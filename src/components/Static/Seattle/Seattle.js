@@ -26,8 +26,7 @@ export default function Seattle() {
         Dining
       </Header>
       <Paragraph>
-        Click <StyledLink to={process.env.PUBLIC_URL + '/supersonic/Supersonic-Dining-Guide-2020.pdf'}>here</StyledLink> to view our dining guide (last updated 2020).<br />
-        The new 2023 Ballard dining guide is coming soon.
+        Click <StyledLink to={process.env.PUBLIC_URL + '/supersonic/Supersonic-Dining-Guide-2024.pdf'}>here</StyledLink> to view our 2024 Ballard dining guide.
       </Paragraph>
 
       <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "column" }, justifyContent: "space-between", mb: 2 }}>
