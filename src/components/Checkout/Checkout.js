@@ -84,7 +84,7 @@ export default function Checkout({ order, setOrder, setError, setCurrentPage }) 
     <section>
       <StyledPaper align='center'>
 
-        {processing && <Loading text='Processing payment...' />}
+        {processing && <Loading text='Processing payment...' secondaryText={`Please contact ${EMAIL_CONTACT} if you do not see a confirmation page!`} />}
 
         {!processing &&
           <Title>Amount due: ${total}</Title>
