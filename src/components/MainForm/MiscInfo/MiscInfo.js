@@ -15,6 +15,7 @@ export default function MiscInfo() {
           name='hospitality'
           options={HOSPITALITY_OPTIONS}
         />
+        <Typography sx={{ mt: 1.5 }}><em>Note that housing requests are currently full.</em></Typography>
       </Box>
 
       <Box sx={{ mb: 6 }}>

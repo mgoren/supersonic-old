@@ -1,6 +1,4 @@
-import { EMAIL_CONTACT } from "config";
-import { mailtoLink } from "utils";
-import { StyledLink, StyledPaper, Title } from 'components/Layout/SharedStyles';
+import { StyledPaper, Title } from 'components/Layout/SharedStyles';
 import { Box, Typography } from '@mui/material';
 
 export default function PaymentExplanation() {
@@ -19,10 +17,10 @@ export default function PaymentExplanation() {
       <Typography>Supersonic is committed to giving dancers the opportunity to experience our flight regardless of financial situation. However, Supersonic is not affiliated with an organization and has no source for funding except from you, our dancers, with your registration fee. The break-even cost per dancer is $180.</Typography>
 
       <Title sx={{mt: 4}}>Work-Trade</Title>
-      <Typography>A limited number of work-trade opportunities exist for $80 or full registration. Note that these positions will require missing dance time, time off on Friday, or advance work. For details, please contact Karen at <StyledLink to={mailtoLink(EMAIL_CONTACT)}>{EMAIL_CONTACT}</StyledLink>.</Typography>
+      <Typography>There are no more work-trade positions available for this year.</Typography>
 
       <Title sx={{mt: 4}}>Scale (per person)</Title>
-      <Typography>$120 minimum &mdash; if you cannot afford this, consider applying for work-trade.</Typography>
+      <Typography>$120 minimum</Typography>
       <Typography>$180 break-even &mdash; this is the amount needed per attendee to cover costs.</Typography>
       <Typography>$240 &mdash; allow one dancer to attend at the low end of the scale.</Typography>
 
