@@ -10,14 +10,15 @@ import OrderSummary from "components/OrderSummary";
 import Receipt from "components/Receipt";
 import { cache, cached } from 'utils';
 import { PAYMENT_METHODS, PAYPAL_OPTIONS, ORDER_DEFAULTS, TITLE, CONFIRMATION_CHECK_TITLE, CONFIRMATION_PAYPAL_TITLE, SANDBOX_MODE } from "config";
-import { Box } from "@mui/material";
-// import { PageTitle, Paragraph, StyledPaper, StyledLink } from 'components/Layout/SharedStyles';
+import { Box, Typography } from "@mui/material";
+import { StyledLink, StyledPaper } from 'components/Layout/SharedStyles';
 
 export default function Registration() {
   // const [registering, setRegistering] = useState(false);
+  const waitlist = true;
   return (
     // registering ? <RealRegistration /> : <PreRegistration setRegistering={setRegistering} />
-    <RealRegistration />
+    waitlist ? <Waitlist /> : <RealRegistration />
   );
 }
 
@@ -112,4 +113,14 @@ const RealRegistration = () => {
       {content}
     </PayPalScriptProvider>
   : content;
+}
+
+const Waitlist = () => {
+  return(
+    <>
+      <StyledPaper>
+        <Typography variant="h6" align='center'>Registration is closed, but you can sign up for the waitlist <StyledLink to="https://forms.gle/qG2BUBNgjRy3hvZn9">here</StyledLink>.</Typography>
+      </StyledPaper>
+    </>
+  )
 }
