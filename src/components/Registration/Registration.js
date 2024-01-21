@@ -13,9 +13,8 @@ import { PAYMENT_METHODS, PAYPAL_OPTIONS, ORDER_DEFAULTS, TITLE, CONFIRMATION_CH
 import { Box, Typography } from "@mui/material";
 import { StyledLink, StyledPaper } from 'components/Layout/SharedStyles';
 
-export default function Registration() {
+export default function Registration({ waitlist = false }) {
   // const [registering, setRegistering] = useState(false);
-  const waitlist = true;
   return (
     // registering ? <RealRegistration /> : <PreRegistration setRegistering={setRegistering} />
     waitlist ? <Waitlist /> : <RealRegistration />

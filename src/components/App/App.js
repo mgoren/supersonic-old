@@ -28,7 +28,8 @@ export default function App() {
             <Route exact path="/seattle" element=<Seattle /> />
             <Route exact path="/contact" element=<Contact /> />
             <Route exact path="/paymentinfo" element=<PaymentExplanation /> />
-            <Route exact path="/registration" element=<Registration /> />
+            <Route exact path="/registration" element=<Registration waitlist={true} /> />
+            <Route exact path="/lateregistration2024" element=<Registration waitlist={false} /> />
             <Route exact path="/error-contact-support" element=<Error error={`Unexpected payment processing error. Please email ${EMAIL_CONTACT}`} /> />
           </Routes>
         </MaterialLayout>
