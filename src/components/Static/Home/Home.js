@@ -64,6 +64,10 @@ export default function Home() {
         We begin the weekend with no walkthrough contra corners. Are you comfortable navigating complex dances often with no walkthroughs or hash calls? Do you recover quickly from mistakes? If you answered yes, this weekend is for you.
       </Paragraph>
 
+      <Paragraph>
+        Only registered participants will be allowed on-site.
+      </Paragraph>
+
       <SectionDivider/>
 
       <Typography variant="h6" fontStyle="italic" gutterBottom>
