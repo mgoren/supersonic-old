@@ -19,6 +19,10 @@ export default function About() {
         Seven Characteristics of Supersonic Dancers
       </Header>
 
+      <Paragraph>
+        Updated 1/23/24 - <StyledLink to="supersonic/dancer-ethos-2024.pdf">Dancer Ethos 2024</StyledLink>
+      </Paragraph>
+
       <List>
         <ListItem>Are aware of the community on the floor: dance with an awareness of one's movements, one's frame, the proper giving of weight, and the space within the hall.</ListItem>
         <ListItem>Dance with a variety of partners regardless of age, body type, gender expression.</ListItem>
