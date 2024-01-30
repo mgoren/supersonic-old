@@ -11,7 +11,7 @@ import Receipt from "components/Receipt";
 import { cache, cached } from 'utils';
 import { PAYMENT_METHODS, PAYPAL_OPTIONS, ORDER_DEFAULTS, TITLE, CONFIRMATION_CHECK_TITLE, CONFIRMATION_PAYPAL_TITLE, SANDBOX_MODE } from "config";
 import { Box, Typography } from "@mui/material";
-import { StyledLink, StyledPaper } from 'components/Layout/SharedStyles';
+import { StyledPaper } from 'components/Layout/SharedStyles';
 
 export default function Registration({ waitlist = false }) {
   // const [registering, setRegistering] = useState(false);
@@ -118,7 +118,8 @@ const Waitlist = () => {
   return(
     <>
       <StyledPaper>
-        <Typography variant="h6" align='center'>Registration is closed, but you can sign up for the waitlist <StyledLink to="https://forms.gle/qG2BUBNgjRy3hvZn9">here</StyledLink>.</Typography>
+        {/* <Typography variant="h6" align='center'>Registration is closed, but you can sign up for the waitlist <StyledLink to="https://forms.gle/qG2BUBNgjRy3hvZn9">here</StyledLink>.</Typography> */}
+        <Typography variant="h6" align='center'>Supersonic 2024 is full!</Typography>
       </StyledPaper>
     </>
   )
