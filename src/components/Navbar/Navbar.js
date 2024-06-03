@@ -5,14 +5,14 @@ import { Link as RouterLink } from 'react-router-dom';
 import ColorModeToggle from 'components/ColorModeToggle';
 
 const pages = [
-  { title: 'Home', path: '/' },
-  { title: 'About', path: '/about' },
-  { title: 'Bands & Callers', path: '/staff' },
-  { title: 'Itinerary', path: '/schedule' },
-  { title: 'Seattle', path: '/seattle' },
-  { title: 'Contact', path: '/contact' },
-  { title: 'Payment info', path: '/paymentinfo' },
-  { title: 'Registration', path: '/registration' }
+  // { title: 'Home', path: '/' },
+  // { title: 'About', path: '/about' },
+  // { title: 'Bands & Callers', path: '/staff' },
+  // { title: 'Itinerary', path: '/schedule' },
+  // { title: 'Seattle', path: '/seattle' },
+  // { title: 'Contact', path: '/contact' },
+  // { title: 'Payment info', path: '/paymentinfo' },
+  // { title: 'Registration', path: '/registration' }
 ];
 
 const row1 = pages.slice(0, 5);
