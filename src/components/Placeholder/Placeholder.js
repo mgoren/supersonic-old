@@ -20,6 +20,11 @@ export default function Home() {
         We are a zesty, high-energy dance weekend for experienced dancers.<br />
       </Typography>
 
+      <Typography variant="h6" sx={{ mb: 2 }}>
+        Music by Gallimaufry & Joyride<br />
+        Calling by Seth Tepfer & Cis Hinkle
+      </Typography>
+
       <Paragraph>
         More info coming soon...
       </Paragraph>
